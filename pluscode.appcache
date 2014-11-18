@@ -1,0 +1,35 @@
+CACHE MANIFEST
+
+# Version 20141118_0001
+CACHE:
+/help.html
+/index.html
+/cacheprimer.html
+/styles.css
+/code.js
+/CompassController.js
+/CompassDisplay.js
+/MapController.js
+/Messages.js
+/jquery-1.11.1.min.js
+/openlocationcode.js
+/img/compass.png
+/img/here_marker.png
+/img/here.png
+/img/ic_action_directions.png
+/img/ic_action_help.png
+/img/ic_action_location_found.png
+/img/ic_action_location_off.png
+/img/ic_action_location_searching.png
+/img/ic_action_web_site.png
+/img/map.png
+/img/navigate.png
+
+NETWORK:
+*
+
+# index.html includes cacheprimer.html in a single pixel iframe,
+# behind the map. cacheprimer.html has the cache manifest.
+# This is so that we won't end up caching index.html?q=foo etc.
+FALLBACK:
+/ /index.html

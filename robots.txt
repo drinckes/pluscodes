@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# Disallow URLs that include a plus character
+Disallow: /*+*
+# Don't crawl images
+Disallow: /img/*

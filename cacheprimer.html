@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html manifest="pluscode.appcache">
+<body>
+This is the cache priming file
+
+  <script>
+    function reloadPage(e) {
+      // Reload the parent frame - pick up the new cache
+      // entries.
+      window.parent.location.reload();
+    }
+    var appCache = window.applicationCache;
+    appCache.addEventListener('updateready', reloadPage, false);
+  </script>
+</body>
+</html>

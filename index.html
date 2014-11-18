@@ -1,0 +1,167 @@
+<!--
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="Description" content="">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>Plus Codes</title>
+  <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="openlocationcode.js"></script>
+  <script type="text/javascript" src="code.js"></script>
+  <script type="text/javascript" src="MapController.js"></script>
+  <script type="text/javascript" src="CompassController.js"></script>
+  <script type="text/javascript" src="CompassDisplay.js"></script>
+  <script type="text/javascript" src="Messages.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="display_container">
+    <div id="input_container">
+      <form id="input_form" onsubmit="plusCodes.processInput()" action="javascript:void(0)">
+        <input id="input" placeholder=""/>
+      </form>
+      <a href="help.html" id="help_icon"></a>
+    </div>
+    <div id="infopanel">
+      <div id="headline"></div>
+      <div id="additional_info">
+        <div id="detail"></div>
+        <div id="message"></div>
+        <div id="geocoder_messages"></div>
+        <div id="location_quality"></div>
+      </div>
+    </div>
+  </div>
+  <div id="map_container">
+    <div id="map-canvas" class="map_frame">
+      <div id="map_error"></div>
+    </div>
+  </div>
+  <div id="compass_container" style="display:none;">
+    <canvas id="base_canvas" height="500" width="500"></canvas>
+    <canvas id="indicator_canvas" height="500" width="500"></canvas>
+  </div>
+  <div id="here_button"></div>
+  <div id="navigate_button" onclick="plusCodes.openNavigationDialog();"></div>
+  <div id="mode_button" class="compass_button-icon"></div>
+  <iframe id="cache_frame" src="cacheprimer.html"></iframe>
+
+  <div id="dialog">
+    <div id="dialog_title"></div>
+    <div id="dialog_content"></div>
+    <div id="dialog_button" class="dialog_button dialog_button_dismiss">Dismiss</div>
+  </div>
+
+  <script>
+    var messages = new Messages();
+    // Set UI text elements.
+    $('#input').attr('placeholder', messages.get('input-prompt'));
+    $('#map_error').html(messages.get('map-error'));
+    $('#location_quality').html(messages.get('no-location'));
+
+    // Set CSS classes depending if we are on desktop or mobile (iOS or Android).
+    var adjustIds = [
+        'display_container', 'dialog',
+        'input_container', 'input', 'map_container', 'infopanel',
+        'here_button', 'navigate_button', 'help_icon',
+        'mode_button', 'compass_container', 'base_canvas', 'indicator_canvas'];
+
+    if (PlusCodes.getMobileDeviceType() != null) {
+      // Hide the additional information.
+      $('#additional_info').hide();
+      // Enable the click on the panel to expand/contract.
+      $('#infopanel').on('click', function() {InfoPanel.toggle();});
+      // Set the desktop/mobile classes.
+      for (var x in adjustIds) {
+        var id = adjustIds[x];
+        $('#' + id).addClass(id + '-mobile');
+      }
+      // Set the canvas location and sizes for mobile.
+      // Get min of available height and width.
+      var dimension = Math.min($('body').height() - 90, $('body').width()) - 40;
+      $('#base_canvas')[0].height = dimension;
+      $('#base_canvas')[0].width = dimension;
+      $('#indicator_canvas')[0].height = dimension;
+      $('#indicator_canvas')[0].width = dimension;
+    } else {
+      for (var x in adjustIds) {
+        var id = adjustIds[x];
+        $('#' + id).addClass(id + '-desktop');
+      }
+    }
+
+    // Check for HTML5 geolocation and orientation support.
+    if (!'geolocation' in navigator ||
+        !window.DeviceOrientationEvent) {
+      var dialog = new Dialog(messages.get('browser-problem'));
+      dialog.addMessage(messages.get('browser-problem-msg'));
+      dialog.show();
+    }
+
+    // Create the object that is going to contain the state.
+    var plusCodes = new PlusCodes();
+    plusCodes.initialise();
+    $('#mode_button').on('click', function() {plusCodes.toggleMode();});
+
+    // Try to lock the layout to portrait.
+    if (window.screen.lockOrientation) {
+      // Available on FireFox and IE, not Chrome.
+      window.screen.lockOrientation('portrait');
+    }
+
+    if (navigator.geolocation) {
+      // Request a location. Use this rather than watchPosition so that
+      // we can tell when we lose location.
+      setTimeout(function() {plusCodes.getCurrentLocation()}, 1000);
+    }
+
+    window.addEventListener("popstate", function(e) {
+      plusCodes.updateDisplay(PlusCodes.getOLCodeFromUrl());
+    });
+  </script>
+
+  <script>
+    // Use this section to load the Google Maps API asynchronously.
+    function setupMapController() {
+      plusCodes.setupMapController();
+    }
+
+    function loadGoogleMaps() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCP3yO0nubZ8vCiyK-ZF-XEJ7VQWe6wVIM&v=3.exp&' +
+          'callback=setupMapController';
+      document.body.appendChild(script);
+    }
+
+    window.onload = loadGoogleMaps;
+
+    // Reveal the error message after a second or so.
+    setTimeout(function() {$('#map_error').fadeIn();}, 1500);
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55279196-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
