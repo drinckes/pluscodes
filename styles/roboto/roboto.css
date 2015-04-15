@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('robotocondensed_light.eot');
+  src: url('robotocondensed_light.eot?#iefix') format('embedded-opentype'),
+       url('robotocondensed_light.woff') format('woff'),
+       url('robotocondensed_light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('robotocondensed_regular.eot');
+  src: url('robotocondensed_regular.eot?#iefix') format('embedded-opentype'),
+       url('robotocondensed_regular.woff') format('woff'),
+       url('robotocondensed_regular.ttf') format('truetype');
+}

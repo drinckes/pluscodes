@@ -1,0 +1,253 @@
+/*
+ * Styles for the application bar, bottom bar and navigation menu.
+ */
+
+.app-bar, .navdrawer-container {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.app-bar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #039be5;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.bottom-bar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #444;
+  z-index: 3;
+}
+
+/* Applied when the menu is opened and the app bar needs to move. */
+.app-bar.open {
+  /* Translate by the width of the menu. */
+  -webkit-transform: translate(250px,0);
+  transform: translate(250px,0);
+}
+
+/* Style for the logo text in the app bar. */
+.app-bar .logo {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 20px;
+  line-height: 60px;
+  margin: 0 16px;
+  color: #fefefe;
+  float: none;
+  max-width: none;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Actions are buttons shown on the right of the app bar. */
+.app-bar-actions  {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/*
+@media all and (min-width: 1200px) {
+  .app-bar {
+    display: block;
+    position: initial;
+    height: 130px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: transparent;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .app-bar.open {
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+  }
+
+  .app-bar .logo {
+    float: left;
+    margin: 0;
+    font-size: 100px;
+    line-height: 130px;
+  }
+
+  .app-bar-actions {
+    float: right;
+    margin: 35px 0;
+  }
+
+  .app-bar:after {
+    content: ' ';
+    display:block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+
+  button.menu {
+    display: none;
+  }
+
+  .bottom-bar {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: initial;
+    float: left;
+    margin-top: 16px;
+    background-color: rgba(0,0,0,0.6);
+  }
+}
+*/
+
+.navdrawer-container {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #039be5;
+  color: #fefefe;
+  -webkit-transform: translate(-250px,0);
+  transform: translate(-250px,0);
+  z-index: 5;
+  overflow-y: auto;
+}
+
+.navdrawer-container.open {
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.navdrawer-container ul {
+  list-style-type: none;
+}
+
+.navdrawer-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0px;
+  background-color: black;
+  /** Unfortunately this is the best way
+  to get no paints in Chrome **/
+  opacity: 0.0000001;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.navdrawer-bg.open {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+.navdrawer-bg {
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.navdrawer-container ul li {
+  height: 60px;
+  line-height: 60px;
+}
+
+.navdrawer-container ul li a {
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navdrawer-container ul li a span {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.navdrawer-container ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navdrawer-container ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+}
+
+.navdrawer-container ul li a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*
+@media all and (min-width: 1200px) {
+  .navdrawer-container {
+    position: initial;
+    width: 100%;
+    height: auto;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition: none;
+    transition: none;
+    pointer-events: auto;
+  }
+
+  .navdrawer-container ul {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navdrawer-container ul li {
+    border: none;
+  }
+
+  .navdrawer-bg, .navdrawer-bg.open {
+    opacity: 0;
+  }
+}
+*/
+
+.promote-layer {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

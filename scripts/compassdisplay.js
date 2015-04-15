@@ -14,41 +14,27 @@
 
 /**
   Display a compass indicator in the screen, and allow it to be controlled.
-  @param {string} base_canvas_id DOM ID of the base canvas with text etc.
-  @param {string} indicator_canvas_id DOM ID of the canvas for the indicator.
+  @param {string} canvas DOM element of the canvas with text etc.
   @param {string} outline_color Web color spec for the compass outline.
   @param {string} indicator_color Web color spec for the compass indicator.
   @param {string} text_color Web color spec for the text.
   @this CompassDisplay
  */
 function CompassDisplay(
-    base_canvas_id, indicator_canvas_id, outline_color,
+    canvas, outline_color,
     indicator_color, text_color) {
-  this.base_canvas = $('#' + base_canvas_id);
-  this.indicator_canvas = $('#' + indicator_canvas_id);
+  this.canvas = canvas;
+  this.outline_color = outline_color;
   this.indicator_color = indicator_color;
   this.text_color = text_color;
-  // Set the size here? Or previously?
   // Get the width and height so we can use it later.
-  this.canvas_width = this.base_canvas[0].width;
-  this.canvas_height = this.base_canvas[0].height;
-  this.compass_radius = this.canvas_width / 2 - 20;
+  this.canvas_width = this.canvas.width;
+  this.canvas_height = this.canvas.height;
+  this.compass_radius = this.canvas_width / 2 - 50;
 
-  // Draw the compass ring.
-  var context = this.base_canvas[0].getContext('2d');
-  context.beginPath();
-  context.arc(
-      this.canvas_width / 2,
-      this.canvas_height / 2,
-      this.compass_radius,
-      0,
-      2 * Math.PI,
-      false);
-  context.lineWidth = 2;
-  context.strokeStyle = outline_color;
-  context.stroke();
-
-  context = this.indicator_canvas[0].getContext('2d');
+  this.drawRing();
+  // We use custom (small) font sizes here.
+  var context = this.canvas.getContext('2d');
   // Draw the top line (large!)
   context.font = 'bold 20pt Arial,sans-serif';
   context.textAlign = 'center';
@@ -63,7 +49,23 @@ function CompassDisplay(
       messages.get('waiting-for-compass-2'),
       this.canvas_width / 2,
       this.canvas_height / 2 + 15);
+
 }
+
+CompassDisplay.prototype.drawRing = function() {
+  var context = this.canvas.getContext('2d');
+  context.beginPath();
+  context.arc(
+      this.canvas_width / 2,
+      this.canvas_height / 2,
+      this.compass_radius,
+      0,
+      2 * Math.PI,
+      false);
+  context.lineWidth = 2;
+  context.strokeStyle = this.outline_color;
+  context.stroke();
+};
 
 /**
   Display an indicator at an angle in degrees, where 0 is straight out the
@@ -77,9 +79,11 @@ CompassDisplay.prototype.display = function(angle, text1, text2) {
   angle = angle - 90;
   var start = (angle - 10) * (Math.PI / 180);
   var end = (angle + 10) * (Math.PI / 180);
-
-  var context = this.indicator_canvas[0].getContext('2d');
+  // Clear the canvas.
+  var context = this.canvas.getContext('2d');
   context.clearRect(0, 0, this.canvas_width, this.canvas_height);
+  this.drawRing();
+  // Draw the indicator.
   context.beginPath();
   context.arc(
       this.canvas_width / 2,

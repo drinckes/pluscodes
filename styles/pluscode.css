@@ -1,0 +1,376 @@
+/*
+ * Styles specifically for pluscode.
+ */
+
+/* Set default margin and padding. */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, form, table, header, footer, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  background-color: #444;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+#cache_frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 1px;
+  width: 1px;
+  z-index: 0;
+  border: none;
+}
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img {
+    vertical-align: middle;
+}
+
+/* Remove default fieldset styles. */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  margin: 0;
+  width: 100%;
+  border: 1px solid gray;
+  padding: 0.5rem 0.65rem;
+  -webkit-appearance: none;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* TYPOGRAPHY SETTINGS */
+
+.small {
+  font-size: 13px;
+  line-height: 1.0000em;
+  padding-top: 1.0000em;
+  padding-bottom: 0;
+}
+
+.base, p, ul, ol, textarea {
+  font-size: 16px;
+  line-height: 1.2em;
+  padding-top: 1.0em;
+  padding-bottom: 0;
+}
+ul {
+  padding-top: 0px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.000em;
+  padding-top: 0.8000em;
+  padding-bottom: 0;
+}
+h2 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.0000em;
+  padding-top: 1.0000em;
+  padding-bottom: 0;
+}
+
+
+/* Styles for the search container and search box. */
+.search-container {
+  position: fixed;
+  top:60px;
+  left:0px;
+  right:0px;
+  z-index: 1;
+  border-bottom: 2px solid #039be5;
+  /* Transform it out of sight. */
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+}
+.search-container.open {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.search-input {
+  width: 100%;
+  height: 60px;
+  padding: 16px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+}
+.map-area {
+  position: fixed;
+  top: 60px;
+  bottom: 175px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.map-center {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  background: url("../images/map_center.png") no-repeat 0 0;
+  background-size: 100%;
+  z-index: 1;
+  display: none;
+  opacity: 0.8;
+}
+
+.dialog.content {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  max-height: 100%;
+  z-index: 3;
+  background-color: #f06292 !important;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+}
+.dialog p {
+  font-size: 20px;
+  padding-top: 0.6em;
+  padding-bottom: 0.2em;
+}
+.dialog-controls {
+  background-color: transparent;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  z-index: 3;
+}
+.dialog-fader {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.dialog textarea {
+  color: black;
+  min-height: 100px;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  resize: none;
+}
+.map {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 1.0;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.map.hide {
+  opacity: 0.0;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.map-error {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+.map-error.open {
+  opacity: 1.0;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.map-error p {
+  font-size: 24px;
+  color: #ddd;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+.compass_container {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  right: 0px;
+  bottom: 175px;
+  background: black;
+  z-index: 0;
+}
+.compass-base-canvas, .compass-indicator-canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+#compass_rotate_demo {
+   background:url(/images/device_rotate.gif);
+   background-size: 128px 128px;
+   background-repeat: no-repeat;
+   width:128px;
+   height:128px;
+}
+
+/* Formats for the InfoBox panel. */
+.infobox {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 60px;
+  height: 115px;
+  background-color: white;
+  z-index: 1;
+}
+.infobox .controls {
+  height: 35px;
+  text-align: center;
+  position: fixed;
+  bottom: 60px;
+  background-color: white;
+  width: 100%;
+  z-index: 1; /* On top of the panels. */
+}
+/* Panel with a fixed size and position in the info box. */
+.infobox .panel {
+  width: 100%;
+  height: 115px;
+  line-height: 115px;
+  color: #f06292;
+  text-align: center;
+  background-color: white;
+}
+.infobox .panel span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+.infobox .panel p {
+  padding-top: 0px;
+}
+.infobox .panel .address {
+  font-size: 24px;
+  font-weight: 400;
+}
+.infobox .panel .areacode {
+  font-size: 16px;
+  display: block;
+}
+.infobox .panel .fullcode {
+  font-size: 16px;
+}
+.infobox .panel .message {
+  font-size: 24px;
+}
+.infobox .panel .shortcode {
+  display: block;
+  font-size: 32px;
+  font-weight: 400;
+}
+.infobox .pushpin-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.content-indicator {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+/* Formats for the page indicator buttons. */
+.page-indicator {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-style: solid;
+  border-radius: 100%;
+  border-color: #000;
+  border-width: 1px;
+  background-color: #000;
+  opacity: 0.5;
+  margin: 8px;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.page-indicator.open {
+  border-color: #888;
+  background-color: #fff;
+  opacity: 0.8;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+/*
+@media only screen and (min-width: 800px) {
+  .pluscode-reference {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1em;
+    padding-top: 1em;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+  .pluscode-fullcode {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1em;
+    padding-top: 1em;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+}
+* */

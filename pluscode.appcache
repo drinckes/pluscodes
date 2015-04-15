@@ -1,29 +1,33 @@
 CACHE MANIFEST
 
-# Version 20141118_0001
+# Version 20150311_0001
 CACHE:
-/help.html
 /index.html
 /cacheprimer.html
-/styles.css
-/code.js
-/CompassController.js
-/CompassDisplay.js
-/MapController.js
-/Messages.js
-/jquery-1.11.1.min.js
-/openlocationcode.js
-/img/compass.png
-/img/here_marker.png
-/img/here.png
-/img/ic_action_directions.png
-/img/ic_action_help.png
-/img/ic_action_location_found.png
-/img/ic_action_location_off.png
-/img/ic_action_location_searching.png
-/img/ic_action_web_site.png
-/img/map.png
-/img/navigate.png
+/compressed.js
+/styles/buttons.css
+/styles/extra_styles.css
+/styles/pluscode.css
+/styles/roboto/roboto.css
+/styles/roboto/robotocondensed_light.eot
+/styles/roboto/robotocondensed_light.ttf
+/styles/roboto/robotocondensed_light.woff
+/styles/roboto/robotocondensed_regular.eot
+/styles/roboto/robotocondensed_regular.ttf
+/styles/roboto/robotocondensed_regular.woff
+/images/code_and_location_pin.png
+/images/code_pin.png
+/images/device_rotate.gif
+/images/ic_arrow_back_grey600_48dp.png
+/images/ic_arrow_forward_grey600_48dp.png
+/images/ic_close_grey600_48dp.png
+/images/ic_cloud_upload_grey600_48dp.png
+/images/ic_explore_white_48dp.png
+/images/ic_keep_grey600_48dp.png
+/images/ic_menu_white_48dp.png
+/images/ic_search_white_48dp.png
+/images/location_pin.png
+/images/map_center.png
 
 NETWORK:
 *

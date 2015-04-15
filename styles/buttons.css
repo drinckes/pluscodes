@@ -1,0 +1,193 @@
+/*
+ * Styles to format <BUTTON> elements.
+ */
+
+
+/* Styles for buttons in the application and bottom bars. */
+button {
+  width: 44px;
+  height: 44px;
+  padding: 0px;
+  margin: 0px;
+  background-color: rgba(254, 254, 254, 0.2);
+  border-style: none;
+  border-radius: 100%;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.highlight {
+  background-color: rgba(254, 254, 254, 0.6);
+}
+
+button:focus {
+  outline: 0;
+}
+
+/* Stop Firefox drawing a dotted line on buttons. */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* Base settings for buttons in the application or bottom bars. */
+button:before {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  content: "";
+}
+
+.pushpin-button {
+  padding: 1px
+  opacity: 0.6;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+.pushpin-button.highlight {
+  background-color: rgba(80, 80, 80, 0.2);
+}
+.pushpin-button:before {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  content: "";
+  background: url("../images/ic_keep_grey600_48dp.png") no-repeat 0 / 100%;
+  transform: rotate(-90deg);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+/** Set background image and image size for the different button types. */
+.pushpin-button.pushed {
+  background-color: rgba(240, 98, 146, 0.6);
+  opacity: 0.6;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+.pushpin-button.pushed:before {
+  transform: rotate(0deg);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+.pushpin-button.pushed.highlight {
+  background-color: rgba(240, 98, 146, 0.8);
+}
+
+button#menu-button {
+  margin: 8px;
+}
+button#menu-button:before {
+  background: url("../images/ic_menu_white_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.search {
+  margin: 8px;
+}
+
+button.search:before {
+  background: url("../images/ic_search_white_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.location {
+  margin: 8px;
+}
+
+button.location:before {
+  background: url("../images/code_and_location_pin.png") no-repeat 0 0 / 100%;
+  width: 42px;
+  height: 42px;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+button.location.code-zoom:before {
+  background: url("../images/code_pin.png") no-repeat 0 0 / 100%;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+button.location.location-zoom:before {
+  background: url("../images/location_pin.png") no-repeat 0 0 / 100%;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+button.compass {
+  opacity: 0.0;
+  margin: 8px;
+}
+button.compass:before {
+  background: url("../images/ic_explore_white_48dp.png") no-repeat 0 0 / 100%;
+  width: 42px;
+  height: 42px;
+}
+
+button.dismiss, button.previous, button.next {
+  margin: 8px;
+}
+
+button.dismiss:before, button.previous:before, button.next:before {
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+button.dismiss:before {
+  background: url("../images/ic_close_grey600_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.previous:before {
+  background: url("../images/ic_arrow_back_grey600_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.next:before {
+  background: url("../images/ic_arrow_forward_grey600_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.upload:before {
+  background: url("../images/ic_cloud_upload_grey600_48dp.png") no-repeat 0 0 / 100%;
+}
+
+button.hide {
+  opacity: 0.0;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -ms-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+button.reveal {
+  opacity: 1.0;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -ms-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
