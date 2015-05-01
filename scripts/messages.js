@@ -531,7 +531,7 @@ function Messages() {
           'fr': 'Ce service doit utiliser votre emplacement. ' +
                 'Si votre navigateur demande, se il vous plaît permettre.',
           'pt-BR': 'Este serviço precisa da sua localização para funcionar. ' +
-                'Se o seu navegador perguntar, por favor, permita-o.'
+                'Se o seu navegador perguntar, por favor, permita-o.',
           'pt-PT': 'Este serviço precisa da sua localização para funcionar. ' +
                 'Se o seu navegador perguntar, por favor, permita-o.'
       },
@@ -539,28 +539,28 @@ function Messages() {
       'ui-help': {
           'en': 'Help',
           'fr': 'Aide',
-          'pt-BR': 'Ajuda'
+          'pt-BR': 'Ajuda',
           'pt-PT': 'Ajuda'
       },
       // Satellite imagery toggle in main menu.
       'ui-satellite': {
           'en': 'Satellite',
           'fr': 'Satellite',
-          'pt-BR': 'Satélite'
+          'pt-BR': 'Satélite',
           'pt-PT': 'Satélite'
       },
       // Language selection sub menu.
       'ui-language': {
           'en': 'Language',
           'fr': 'Langue',
-          'pt-BR': 'Língua'
+          'pt-BR': 'Língua',
           'pt-PT': 'Língua'
       },
       // Feedback link in main menu.
       'ui-feedback': {
           'en': 'Feedback',
           'fr': 'Commentaires',
-          'pt-BR': 'Comentários'
+          'pt-BR': 'Comentários',
           'pt-PT': 'Comentários'
       },
       // Link to github project in main menu.
@@ -574,7 +574,7 @@ function Messages() {
       'dismiss': {
           'en': 'Dismiss',
           'fr': 'Ignorer',
-          'pt-BR': 'Dispensar'
+          'pt-BR': 'Dispensar',
           'pt-PT': 'Fechar'
       },
       // Help page content shown to the user.
@@ -646,7 +646,7 @@ function Messages() {
           'fr': 'Envoyez vos commentaires. Faites-nous savoir ce que vous aimez, ' +
                 'ou ce qui ne fonctionne pas et nous essayons d\'améliorer.',
           'pt-BR': 'Envie seu comentário. Deixe-nos saber o que você gosta, ' +
-                'ou o que não está funcionando, e vamos tentar melhorar.'
+                'ou o que não está funcionando, e vamos tentar melhorar.',
           'pt-PT': 'Envie os seus comentários. Diga-nos o que gosta ou ' +
                 'o que não está a funcionar, e tentaremos melhorar.'
       },
