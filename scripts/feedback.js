@@ -34,7 +34,7 @@ Feedback.BUSY = false;
  * @param address The currently displayed short code and address. Could be null.
  * @param compassFunction true if the compass looks ok, false otherwise.
  * @param lang The current language setting.
- * @param comment The comment from the user, truncated to 400 chars.
+ * @param comment The comment from the user, truncated to 1024 chars.
  */
 Feedback.storeFeedback = function(deviceLat, deviceLng, code, address, mapFunction, compassFunction, lang, comment) {
   // Do we have the maximum pending feedbacks?
