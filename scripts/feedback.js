@@ -34,7 +34,7 @@ Feedback.BUSY = false;
  * @param address The currently displayed short code and address. Could be null.
  * @param compassFunction true if the compass looks ok, false otherwise.
  * @param lang The current language setting.
- * @param comment The comment from the user, truncated to 100 chars.
+ * @param comment The comment from the user, truncated to 1024 chars.
  */
 Feedback.storeFeedback = function(deviceLat, deviceLng, code, address, mapFunction, compassFunction, lang, comment) {
   // Do we have the maximum pending feedbacks?
@@ -52,7 +52,7 @@ Feedback.storeFeedback = function(deviceLat, deviceLng, code, address, mapFuncti
   feedback += $(window).height() + ':' + $(window).width() + ':';
   feedback += code + ':';
   feedback += encodeURIComponent(address) + ':';
-  feedback += encodeURIComponent(comment.substr(0, 100)) + ':';
+  feedback += encodeURIComponent(comment.substr(0, 1024)) + ':';
   for (var i = 0; i <= Feedback.MAX_FEEDBACKS; i++) {
     if (!DataStore.has(Feedback.FEEDBACK_PREFIX + i)) {
       DataStore.putString(Feedback.FEEDBACK_PREFIX + i, feedback);
