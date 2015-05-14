@@ -276,11 +276,6 @@ function browserFeaturesDisplay() {
 }
 
 function noLocationDisplay(code) {
-  //ui.locationDialog.innerHTML = messages.get('extend-failure-msg', {OLC: code});
-  //ui.locationNavBar.innerHTML = '<button onclick="noLocationDismiss();" ' +
-  //                   'class="dismiss"></button>';
-  //ui.locationDialog.addClass('open');
-  //ui.locationNavBar.addClass('open');
   var dialog = new Dialog('nolocation',
       $('<section>').append($('<p>').html(messages.get('extend-failure-msg', {OLC: code}))));
   dialog.addButton(
