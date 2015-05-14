@@ -276,16 +276,17 @@ function browserFeaturesDisplay() {
 }
 
 function noLocationDisplay(code) {
-  ui.locationDialog.innerHTML = messages.get('extend-failure-msg', {OLC: code});
-  ui.locationNavBar.innerHTML = '<button onclick="noLocationDismiss();" ' +
-                     'class="dismiss"></button>';
-  addClass(ui.locationDialog, 'open');
-  addClass(ui.locationNavBar, 'open');
-}
-
-function noLocationDismiss() {
-  removeClass(ui.locationDialog, 'open');
-  removeClass(ui.locationNavBar, 'open');
+  //ui.locationDialog.innerHTML = messages.get('extend-failure-msg', {OLC: code});
+  //ui.locationNavBar.innerHTML = '<button onclick="noLocationDismiss();" ' +
+  //                   'class="dismiss"></button>';
+  //ui.locationDialog.addClass('open');
+  //ui.locationNavBar.addClass('open');
+  var dialog = new Dialog('nolocation',
+      $('<section>').append($('<p>').html(messages.get('extend-failure-msg', {OLC: code}))));
+  dialog.addButton(
+      $('<button>').addClass('dismiss').click(function() {
+          dialog.remove();
+      }));
 }
 
 function commentShow() {
@@ -374,7 +375,7 @@ function searchEntered() {
   if (fields['short'] && !fields['address']) {
     if (recoveryLocation[0] === null) {
       // Got neither. Should show an error message!
-      noLocationDisplay();
+      noLocationDisplay(fields['short']);
       return;
     } else {
       // Use our current location or map center to extend the short code.
