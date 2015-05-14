@@ -37,14 +37,14 @@ function Messages() {
     this.language = DataStore.get(Messages.LANGUAGE_PREF);
   } else if ('languages' in navigator) {
     // If we have a preferred language list for the browser.
-    for (var index in navigator.languages) {
-      if (navigator.languages[index] in LocalisedMessages) {
-        this.language = LocalisedMessages[navigator.languages[index]];
+    for (var i = 0; i < navigator.languages.length; i++) {
+      if (navigator.languages[i] in LocalisedMessages) {
+        this.language = navigator.languages[i];
         break;
       }
-      var index = navigator.languages[index].substr(0, 2);
-      if (index in LocalisedMessages) {
-        this.language = LocalisedMessages[index];
+      var lang = navigator.languages[i].substr(0, 2);
+      if (lang in LocalisedMessages) {
+        this.language = lang;
         break;
       }
     }
@@ -53,10 +53,10 @@ function Messages() {
     var language = navigator.language || navigator.userLanguage;
     if (language in LocalisedMessages) {
       // We have an entry for the browser language.
-      this.language = LocalisedMessages[language];
+      this.language = language;
     } else if (language.substr(0, 2) in LocalisedMessages) {
       // Try just the first two characters of the browser language.
-      this.language = LocalisedMessages[language.substr(0, 2)];
+      this.language = language.substr(0, 2);
     }
   }
 }
