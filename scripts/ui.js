@@ -317,12 +317,8 @@ function commentControls() {
 }
 
 function compassCheckDisplay() {
-  var section = $('<section>')
-      .append($('<section>').append($('<p>').html(messages.get('compass-check-msg'))))
-      .append($('<span>').attr('id', 'compass_rotate_demo'));
-
   var table = $('<table>').append('<tr>')
-      .append($('<td>').html(messages.get('compass-check-msg')))
+      .append($('<td>').append($('<p>').html(messages.get('compass-check-msg'))))
       .append($('<td>').append('<span>').attr('id', 'compass_rotate_demo'));
   var dialog = new Dialog('compass', table);
   dialog.addButton(
