@@ -137,9 +137,13 @@ function receiveMapClickEvent(event) {
   lastMapClickMillis = now;
   if (displayedCode.is_pinned) {
     if (now - lastClick < 3000) {
-      unPinBeforeClicking();
+      // Tapped twice in 3 seconds - they're probably confused why the first tap
+      // did nothing, so unpin and continue with the tap.
+      togglePushPin();
+    } else {
+      // It's pinned, so ignore the tap. They should unpin the current location.
+      return;
     }
-    return;
   }
   var zoom = map.map.getZoom();
   var center = map.map.getCenter();
@@ -204,8 +208,23 @@ function receiveMapBoundsEvent() {
       displayedCode.codeArea.longitudeHi);
 }
 
+/** Called when the map tiles are loaded. */
+function receiveTilesLoadedEvent() {
+  console.log('Tiles are now loaded');
+  map.tilesLoaded = true;
+  if (!map.isCodeMarkerDisplayed()) {
+    map.setCodeMarker(
+        displayedCode.codeArea.latitudeLo,
+        displayedCode.codeArea.longitudeLo,
+        displayedCode.codeArea.latitudeHi,
+        displayedCode.codeArea.longitudeHi);
+    // Zooming in is easier than zooming out.
+    zoomToCode();
+  }
+}
 
-/** Called with device location updates. */
+
+/** Called with device location updates. When a location arrives, it */
 function receiveDeviceLocation(lat, lng, accuracy) {
   map.setLocationMarker(lat, lng, accuracy);
   if (deviceLatLng === null && !displayedCode.is_pinned) {
@@ -215,6 +234,7 @@ function receiveDeviceLocation(lat, lng, accuracy) {
     compass.setPoints(lat, lng,
         displayedCode.codeArea.latitudeCenter,
         displayedCode.codeArea.longitudeCenter);
+    displayCodeInformation(displayedCode);
     map.setCodeMarker(
         displayedCode.codeArea.latitudeLo,
         displayedCode.codeArea.longitudeLo,
@@ -222,7 +242,6 @@ function receiveDeviceLocation(lat, lng, accuracy) {
         displayedCode.codeArea.longitudeHi);
     // Zooming in is easier than zooming out.
     zoomToCode();
-    displayCodeInformation(displayedCode);
   } else if (displayedCode.code != null) {
     compass.setPoints(lat, lng,
         displayedCode.codeArea.latitudeCenter,
@@ -231,7 +250,10 @@ function receiveDeviceLocation(lat, lng, accuracy) {
   if (deviceLatLng === null) {
     $('button.compass').addClass('reveal');
   }
+  // Save the current location.
   deviceLatLng = [lat, lng];
+  // Update the button status depending on whether the current location is
+  // within the map view.
   updateLocationButton();
 }
 
@@ -251,6 +273,7 @@ function zoomToCode(code_opt) {
       zoomLevel = CodeLengthZoom[i].zoom;
     }
   }
+  console.log('Zooming map with code ' + displayedCode.code + ' to zoomLevel ' + zoomLevel);
   map.zoomToCenter(
       codeArea.latitudeCenter, codeArea.longitudeCenter, zoomLevel);
 }
@@ -434,6 +457,10 @@ function shortenDisplayedCode(code, address, lat, lng) {
   try {
     var shortCode = OpenLocationCode.shorten(code.code, lat, lng);
     if (shortCode != code.code) {
+      // Too much? Keep at least AB+CD.
+      if (shortCode.length < code.code.length - 6) {
+        shortCode = code.code.substr(6);
+      }
       codeAddressCache.put(code.neighbourhood,
           {'address': address, 'lat': lat, 'lng': lng});
       return shortCode;
@@ -482,8 +509,8 @@ function getRecoveryLocation() {
 /**
  * Load Google Maps asynch so we can work offline.
  *
- * Once the Google Maps API has loaded, it calls setupMaps to initialise the map
- * object.
+ * Once the Google Maps API has loaded, it calls googleMapSetup to initialise
+ * the map object.
  *
  * In the page javascript, include:
  *   window.online = loadGoogleMaps;

@@ -25,8 +25,8 @@ Help.currentPage = 1;
 
 Help.start = function() {
   Help.currentPage = 1;
-  var dialog = new Dialog('help',
-      $('<section>').html(messages.get('help-01')));
+  var dialog = new Dialog('help', $('<section>'));
+  Help.display(Help.currentPage);
   dialog.addButton($('<button>').addClass('previous').click(Help.clicked));
   dialog.addButton($('<button>').addClass('dismiss').click(Help.clicked));
   dialog.addButton($('<button>').addClass('next').click(Help.clicked));
@@ -57,12 +57,20 @@ Help.clicked = function(e) {
 Help.display = function(pageNumber) {
   Help.currentPage = pageNumber;
   $('#help-dialog').fadeOut(function() {$(this).remove()});
+  var content = "";
+  for (var i = 0; i <= 9; i++) {
+    var section = messages.get('help-0' + Help.currentPage + '-' + i);
+    if (section === null) {
+      break;
+    }
+    content += section;
+  }
   // Create a new content container.
   var dialog = $('<section>')
       .attr('id', 'help-dialog')
       .addClass('dialog')
       .addClass('content')
-      .html(messages.get('help-0' + Help.currentPage)).css('display', 'none');
+      .html(content).css('display', 'none');
   dialog.insertBefore($('#help-controls'));
   $(dialog).fadeIn();
 };

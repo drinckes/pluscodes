@@ -42,27 +42,8 @@ Geocoder.geocodeAddress = function(address, fallbackLat, fallbackLng) {
         {'address': address, 'language': messages.language},
         function(results, status) {
           if (status != google.maps.GeocoderStatus.OK) {
-            switch (status) {
-              case google.maps.GeocoderStatus.ZERO_RESULTS:
-                deferred.reject(
-                    messages.get('geocode-fail', {ADDRESS: address}));
-                break;
-              case google.maps.GeocoderStatus.OVER_QUERY_LIMIT:
-                deferred.reject(
-                    messages.get('geocode-fail-limit', {ADDRESS: address}));
-                break;
-              case google.maps.GeocoderStatus.REQUEST_DENIED:
-                deferred.reject(
-                    messages.get('geocode-fail-deny', {ADDRESS: address}));
-                break;
-              case google.maps.GeocoderStatus.INVALID_REQUEST:
-                deferred.reject(
-                    messages.get('geocode-fail-reject', {ADDRESS: address}));
-                break;
-              default:
-                deferred.reject(
-                    messages.get('geocode-fail-error', {ADDRESS: address}));
-            }
+            deferred.reject(
+                messages.get('geocode-fail', {ADDRESS: address}));
           } else if (results === null || results.length == 0) {
             deferred.reject(messages.get('geocoder-no-info'));
           } else {
@@ -102,22 +83,7 @@ Geocoder.lookupLatLng = function(lat, lng) {
       {'latLng': latlng, 'language': messages.language},
       function(results, status) {
         if (status != google.maps.GeocoderStatus.OK) {
-          switch (status) {
-            case google.maps.GeocoderStatus.ZERO_RESULTS:
-              deferred.reject(messages.get('geocode-reverse-zero'));
-              break;
-            case google.maps.GeocoderStatus.OVER_QUERY_LIMIT:
-              deferred.reject(messages.get('geocode-reverse-limit'));
-              break;
-            case google.maps.GeocoderStatus.REQUEST_DENIED:
-              deferred.reject(messages.get('geocode-reverse-deny'));
-              break;
-            case google.maps.GeocoderStatus.INVALID_REQUEST:
-              deferred.reject(messages.get('geocode-reverse-reject'));
-              break;
-            default:
-              deferred.reject(messages.get('geocode-reverse-error'));
-          }
+          deferred.reject(messages.get('geocode-reverse-fail'));
           return deferred.promise();
         }
         if (results === null || results.length == 0) {
@@ -129,6 +95,7 @@ Geocoder.lookupLatLng = function(lat, lng) {
         var types = [
             'neighborhood',
             'postal_town',
+            'sublocality',
             'locality',
             'administrative_area_level_4',
             'administrative_area_level_3',

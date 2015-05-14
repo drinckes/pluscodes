@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="styles/roboto/roboto.css">
     <link rel="stylesheet" href="styles/extra_styles.css">
     <script type="text/javascript" src="/compressed.js"></script>
+    <!--
+      When debugging, enable the following lines and comment out the
+      /compressed.js script load above.
+    -->
+    <!--
+      <script type="text/javascript" src="scripts/compasscontroller.js"></script>
+      <script type="text/javascript" src="scripts/compassdisplay.js"></script>
+      <script type="text/javascript" src="scripts/datastore.js"></script>
+      <script type="text/javascript" src="scripts/dialog.js"></script>
+      <script type="text/javascript" src="scripts/feedback.js"></script>
+      <script type="text/javascript" src="scripts/geocoder.js"></script>
+      <script type="text/javascript" src="scripts/help.js"></script>
+      <script type="text/javascript" src="scripts/infobox.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="scripts/locationlistener.js"></script>
+      <script type="text/javascript" src="scripts/main.js"></script>
+      <script type="text/javascript" src="scripts/mapcontroller.js"></script>
+      <script type="text/javascript" src="scripts/messages.js"></script>
+      <script type="text/javascript" src="scripts/openlocationcode.js"></script>
+      <script type="text/javascript" src="scripts/simplecache.js"></script>
+      <script type="text/javascript" src="scripts/ui.js"></script>
+      <script type="text/javascript" src="scripts/locales/en.js"></script>
+    -->
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no">
   </head>
@@ -61,7 +84,7 @@
       <ul class="promote-layer">
         <li><a id="nav_help"></a></li>
         <li><a id="nav_satellite"></a></li>
-        <li><a id="nav_language"></a></li>
+        <!--<li><a id="nav_language"></a></li>-->
         <li><a id="nav_google"></a></li>
         <li><a id="nav_bing"></a></li>
         <li><a id="nav_osm"></a></li>
@@ -69,6 +92,7 @@
         <li><a id="nav_github" href="//github.org/google/open-location-code/"></a></li>
         <li><a class="nav_dismiss"></a></li>
     </nav>
+    <!--
     <nav id="language-menu" class="navdrawer-container">
       <ul class="promote-layer">
         <li><a id="lang_en">English</a></li>
@@ -80,6 +104,7 @@
         <li><a class="nav_dismiss"></a></li>
       </ul>
     </nav>
+    -->
 
     <script>
       init();
@@ -112,7 +137,7 @@
       window.onload = googleMapLoad;
 
       // Reveal the error message after a second or so.
-      setTimeout(function() { $('.map-error').addClass('open'); }, 2500);
+      setTimeout(function() { $('.map-error').html($('<p>').html(messages.get('map-error'))); $('.map-error').addClass('open'); }, 5000);
     </script>
   </body>
 </html>

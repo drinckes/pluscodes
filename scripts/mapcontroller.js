@@ -19,11 +19,12 @@
   @param {object} container The DOM element (a DIV) that contains the map.
  */
 function MapController(container) {
+  // Flag to indicate that the Maps API is loaded and the map is ready.
+  this.tilesLoaded = false;
   // DOM element holding the map.
   this.mapContainer = container;
   // Google Maps API map object.
   this.map;
-
   // Google Maps API Marker object indicating current device
   // location.
   this.marker;
@@ -31,7 +32,12 @@ function MapController(container) {
   // OLC location marker.
   this.codeMarker;
   // Google Maps API Rectangle object indicating the current OLC code area.
-  this.codeRectangle;
+  this.codeArea;
+  // Flag to indicate that we have not yet drawn the code marker. We may
+  // receive location events faster than the map can load, so we need a way to
+  // indicate that although we are not at the first location, we need to plot
+  // the location as if it was the first time.
+  this.codeMarkerDisplayed = false;
 }
 
 // ID for the imagery type preference.
@@ -41,7 +47,7 @@ MapController._IMAGERY_PREF = 'map_imagery';
 MapController._DEFAULT_CENTER = null;
 
 // Default zoom level.
-MapController._DEFAULT_ZOOM = 3;
+MapController._DEFAULT_ZOOM = 4;
 
 
 /**
@@ -80,9 +86,10 @@ MapController.prototype.initialise = function() {
       map: this.map,
       clickable: false
   });
-  this.codeRectangle = new google.maps.Rectangle({
+  this.codeArea = new google.maps.Polygon({
       map: this.map,
-      clickable: false
+      clickable: false,
+      geodesic: true
   });
   this.codeMarker = new google.maps.Circle({
       map: this.map,
@@ -94,6 +101,7 @@ MapController.prototype.initialise = function() {
   }
 
   google.maps.event.addListener(this.map, 'zoom_changed', receiveMapZoomEvent);
+  google.maps.event.addListener(this.map, 'tilesloaded', receiveTilesLoadedEvent);
   google.maps.event.addListener(this.map, 'click', receiveMapClickEvent);
   google.maps.event.addListener(this.map, 'bounds_changed',
       receiveMapBoundsEvent);
@@ -131,7 +139,7 @@ MapController.prototype.initialise = function() {
 
 /** @return {boolean} whether the map has been initialised. */
 MapController.prototype.isReady = function() {
-  return typeof this.map != 'undefined';
+  return typeof this.map != 'undefined' && this.tilesLoaded;
 };
 
 
@@ -203,15 +211,16 @@ MapController.prototype.redrawLocationMarker = function() {
   sized circle is drawn (depending on the zoom level).
  */
 MapController.prototype.setCodeMarker = function(latLo, lngLo, latHi, lngHi) {
-  if (typeof google == 'undefined' || typeof google.maps == 'undefined') {
+  if (typeof google == 'undefined' || typeof google.maps == 'undefined' || !this.isReady()) {
     return;
   }
+  this.codeMarkerDisplayed = true;
   var zoom = this.map.getZoom();
   var size = 1.5 * Math.pow(2, Math.max(0, 20 - zoom));
   if (size > MapController._earthDistance(latLo, lngLo, latHi, lngHi)) {
     var center = new google.maps.LatLng(
         (latLo + latHi) / 2, (lngLo + lngHi) / 2);
-    this.codeRectangle.setMap(null);
+    this.codeArea.setMap(null);
     this.codeMarker.setOptions({
         map: this.map,
         center: center,
@@ -223,13 +232,16 @@ MapController.prototype.setCodeMarker = function(latLo, lngLo, latHi, lngHi) {
         fillOpacity: 1.0,
     });
   } else {
-    var sw = new google.maps.LatLng(latLo, lngLo);
-    var ne = new google.maps.LatLng(latHi, lngHi);
-    var bounds = new google.maps.LatLngBounds(sw, ne);
+    var path = Array();
+    path.push(new google.maps.LatLng(latLo, lngLo));
+    path.push(new google.maps.LatLng(latLo, lngHi));
+    path.push(new google.maps.LatLng(latHi, lngHi));
+    path.push(new google.maps.LatLng(latHi, lngLo));
+
     this.codeMarker.setMap(null);
-    this.codeRectangle.setOptions({
+    this.codeArea.setOptions({
         map: this.map,
-        bounds: bounds,
+        path: path,
         strokeColor: '#e11e60',
         strokeOpacity: 1.0,
         strokeWeight: 1,
@@ -237,6 +249,12 @@ MapController.prototype.setCodeMarker = function(latLo, lngLo, latHi, lngHi) {
         fillOpacity: 0.3
     });
   }
+};
+
+
+/** Indicates whether we have drawn the code marker yet. */
+MapController.prototype.isCodeMarkerDisplayed = function() {
+  return this.codeMarkerDisplayed;
 };
 
 
@@ -266,8 +284,15 @@ MapController.prototype.zoomToCenter = function(lat, lng, zoom) {
   if (typeof google == 'undefined' || typeof google.maps == 'undefined') {
     return;
   }
+  console.log('Zooming map');
   this.map.setCenter(new google.maps.LatLng(lat, lng));
-  this.map.setZoom(zoom);
+  try {
+    // This needs to be wrapped in case the map isn't ready. It will throw
+    // an exception but will display the correct zoom once the tiles are loaded.
+    this.map.setZoom(zoom);
+  } catch (e) {
+    //
+  }
 };
 
 /**

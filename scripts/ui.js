@@ -268,7 +268,7 @@ function locationDismissCallback() {
 
 function browserFeaturesDisplay() {
   var dialog = new Dialog(
-      'browser', $('<section>').html(messages.get('browser-problem-msg')));
+      'browser', $('<section>').append($('<p>').html(messages.get('browser-problem-msg'))));
   dialog.addButton(
       $('<button>').addClass('dismiss').click(function() {
           dialog.remove();
@@ -320,17 +320,9 @@ function commentControls() {
   Dialog.remove('comment');
 }
 
-function unPinBeforeClicking() {
-  var dialog = new Dialog('unpin',
-      $('<p>').text(messages.get('unpin')));
-  dialog.addButton(
-      $('<button>').addClass('dismiss').click(
-          function() {Dialog.remove('unpin')}));
-}
-
 function compassCheckDisplay() {
   var section = $('<section>')
-      .append($('<section>').html(messages.get('compass-check-msg')))
+      .append($('<section>').append($('<p>').html(messages.get('compass-check-msg'))))
       .append($('<span>').attr('id', 'compass_rotate_demo'));
 
   var table = $('<table>').append('<tr>')
