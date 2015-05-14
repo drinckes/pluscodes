@@ -224,7 +224,7 @@ function receiveTilesLoadedEvent() {
 }
 
 
-/** Called with device location updates. When a location arrives, it */
+/** Called with device location updates. */
 function receiveDeviceLocation(lat, lng, accuracy) {
   map.setLocationMarker(lat, lng, accuracy);
   if (deviceLatLng === null && !displayedCode.is_pinned) {
@@ -234,7 +234,6 @@ function receiveDeviceLocation(lat, lng, accuracy) {
     compass.setPoints(lat, lng,
         displayedCode.codeArea.latitudeCenter,
         displayedCode.codeArea.longitudeCenter);
-    displayCodeInformation(displayedCode);
     map.setCodeMarker(
         displayedCode.codeArea.latitudeLo,
         displayedCode.codeArea.longitudeLo,
@@ -242,6 +241,7 @@ function receiveDeviceLocation(lat, lng, accuracy) {
         displayedCode.codeArea.longitudeHi);
     // Zooming in is easier than zooming out.
     zoomToCode();
+    displayCodeInformation(displayedCode);
   } else if (displayedCode.code != null) {
     compass.setPoints(lat, lng,
         displayedCode.codeArea.latitudeCenter,
@@ -273,7 +273,6 @@ function zoomToCode(code_opt) {
       zoomLevel = CodeLengthZoom[i].zoom;
     }
   }
-  console.log('Zooming map with code ' + displayedCode.code + ' to zoomLevel ' + zoomLevel);
   map.zoomToCenter(
       codeArea.latitudeCenter, codeArea.longitudeCenter, zoomLevel);
 }

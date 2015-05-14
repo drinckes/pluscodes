@@ -284,7 +284,6 @@ MapController.prototype.zoomToCenter = function(lat, lng, zoom) {
   if (typeof google == 'undefined' || typeof google.maps == 'undefined') {
     return;
   }
-  console.log('Zooming map');
   this.map.setCenter(new google.maps.LatLng(lat, lng));
   try {
     // This needs to be wrapped in case the map isn't ready. It will throw
