@@ -567,7 +567,7 @@ function Messages() {
       'ui-github': {
           'en': 'View project',
           'fr': 'Voir le projet',
-          'pt-BR': 'Ver projeto'
+          'pt-BR': 'Ver projeto',
           'pt-PT': 'Ver projeto'
       },
       // Dismiss button in menus.
@@ -606,7 +606,6 @@ function Messages() {
                 '<p>To get the plus+code for a place just drag the map to ' +
                 'highlight the place you want.</p>'
       },
-                                                                                |
       // Page 3 answers some FAQ.
       'help-03': {
           'en': '<h2>What are the parts of the code?</h2>' +
