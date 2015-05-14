@@ -210,7 +210,6 @@ function receiveMapBoundsEvent() {
 
 /** Called when the map tiles are loaded. */
 function receiveTilesLoadedEvent() {
-  console.log('Tiles are now loaded');
   map.tilesLoaded = true;
   if (!map.isCodeMarkerDisplayed()) {
     map.setCodeMarker(
