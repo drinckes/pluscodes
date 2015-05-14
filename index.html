@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="styles/roboto/roboto.css">
     <link rel="stylesheet" href="styles/extra_styles.css">
     <script type="text/javascript" src="/compressed.js"></script>
+    <!--
+      When debugging, enable the following lines and comment out the
+      /compressed.js script load above.
+    -->
+    <!--
+      <script type="text/javascript" src="scripts/compasscontroller.js"></script>
+      <script type="text/javascript" src="scripts/compassdisplay.js"></script>
+      <script type="text/javascript" src="scripts/datastore.js"></script>
+      <script type="text/javascript" src="scripts/dialog.js"></script>
+      <script type="text/javascript" src="scripts/feedback.js"></script>
+      <script type="text/javascript" src="scripts/geocoder.js"></script>
+      <script type="text/javascript" src="scripts/help.js"></script>
+      <script type="text/javascript" src="scripts/infobox.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="scripts/locationlistener.js"></script>
+      <script type="text/javascript" src="scripts/main.js"></script>
+      <script type="text/javascript" src="scripts/mapcontroller.js"></script>
+      <script type="text/javascript" src="scripts/messages.js"></script>
+      <script type="text/javascript" src="scripts/openlocationcode.js"></script>
+      <script type="text/javascript" src="scripts/simplecache.js"></script>
+      <script type="text/javascript" src="scripts/ui.js"></script>
+      <script type="text/javascript" src="scripts/locales/en.js"></script>
+    -->
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no">
   </head>
@@ -72,11 +95,8 @@
     <nav id="language-menu" class="navdrawer-container">
       <ul class="promote-layer">
         <li><a id="lang_en">English</a></li>
-        <li><a id="lang_fr">Français</a></li>
-        <li><a id="lang_pt-BR">Português</a></li>
-        <li><a id="lang_sd">سنڌي</a></li>
-        <li><a id="lang_skr">سرائیکی</a></li>
-        <li><a id="lang_ur">اُردُو</a></li>
+        <li><a id="lang_pt">Português</a></li>
+        <li><a id="lang_pt-BR">Português brasileiro</a></li>
         <li><a class="nav_dismiss"></a></li>
       </ul>
     </nav>
@@ -112,7 +132,7 @@
       window.onload = googleMapLoad;
 
       // Reveal the error message after a second or so.
-      setTimeout(function() { $('.map-error').addClass('open'); }, 2500);
+      setTimeout(function() { $('.map-error').html($('<p>').html(messages.get('map-error'))); $('.map-error').addClass('open'); }, 5000);
     </script>
   </body>
 </html>

@@ -1,1 +1,1 @@
-Compress javascript using cat *.js | yui-compressor --type js -o ../compressed.js
+Compress javascript using cat *.js */*.js | yui-compressor --type js -o ../compressed.js

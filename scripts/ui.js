@@ -268,7 +268,7 @@ function locationDismissCallback() {
 
 function browserFeaturesDisplay() {
   var dialog = new Dialog(
-      'browser', $('<section>').html(messages.get('browser-problem-msg')));
+      'browser', $('<section>').append($('<p>').html(messages.get('browser-problem-msg'))));
   dialog.addButton(
       $('<button>').addClass('dismiss').click(function() {
           dialog.remove();
@@ -276,16 +276,12 @@ function browserFeaturesDisplay() {
 }
 
 function noLocationDisplay(code) {
-  ui.locationDialog.innerHTML = messages.get('extend-failure-msg', {OLC: code});
-  ui.locationNavBar.innerHTML = '<button onclick="noLocationDismiss();" ' +
-                     'class="dismiss"></button>';
-  addClass(ui.locationDialog, 'open');
-  addClass(ui.locationNavBar, 'open');
-}
-
-function noLocationDismiss() {
-  removeClass(ui.locationDialog, 'open');
-  removeClass(ui.locationNavBar, 'open');
+  var dialog = new Dialog('nolocation',
+      $('<section>').append($('<p>').html(messages.get('extend-failure-msg', {OLC: code}))));
+  dialog.addButton(
+      $('<button>').addClass('dismiss').click(function() {
+          dialog.remove();
+      }));
 }
 
 function commentShow() {
@@ -320,21 +316,9 @@ function commentControls() {
   Dialog.remove('comment');
 }
 
-function unPinBeforeClicking() {
-  var dialog = new Dialog('unpin',
-      $('<p>').text(messages.get('unpin')));
-  dialog.addButton(
-      $('<button>').addClass('dismiss').click(
-          function() {Dialog.remove('unpin')}));
-}
-
 function compassCheckDisplay() {
-  var section = $('<section>')
-      .append($('<section>').html(messages.get('compass-check-msg')))
-      .append($('<span>').attr('id', 'compass_rotate_demo'));
-
   var table = $('<table>').append('<tr>')
-      .append($('<td>').html(messages.get('compass-check-msg')))
+      .append($('<td>').append($('<p>').html(messages.get('compass-check-msg'))))
       .append($('<td>').append('<span>').attr('id', 'compass_rotate_demo'));
   var dialog = new Dialog('compass', table);
   dialog.addButton(
@@ -382,7 +366,7 @@ function searchEntered() {
   if (fields['short'] && !fields['address']) {
     if (recoveryLocation[0] === null) {
       // Got neither. Should show an error message!
-      noLocationDisplay();
+      noLocationDisplay(fields['short']);
       return;
     } else {
       // Use our current location or map center to extend the short code.
