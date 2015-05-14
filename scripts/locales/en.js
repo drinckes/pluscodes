@@ -46,7 +46,7 @@ LocalisedMessages["en"] = {
     "description": "If Google can't find any location name in the area"
   },
   "extend-failure-msg": {
-    "message": "<p>To work out where $OLC$ is, we need your current location, or you need to include a town or city in the information.<br/><br/>Check that your browser is allowing location, and that location services are enabled on your device.</p>",
+    "message": "To work out where $OLC$ is, we need your current location, or you need to include a town or city in the information.<br/><br/>Check that your browser is allowing location, and that location services are enabled on your device.",
     "description": "Shown when the user location cannot be determined"
   },
   "geocode-not-loaded": {
@@ -104,6 +104,14 @@ LocalisedMessages["en"] = {
   "compass-check-ok": {
     "message": "The compass on your device looks OK!",
     "description": "The comass on the device can be read and looks good"
+  },
+  "waiting-for-compass-1": {
+    "message": "Waiting for",
+    "description": "First half of 'waiting for compass reading' message"
+  },
+  "waiting-for-compass-2": {
+    "message": "compass reading",
+    "description": "Second half of 'waiting for compass reading' message"
   },
   "location-prompt": {
     "message": "This service needs to use your location. If your browser asks, please allow it.",

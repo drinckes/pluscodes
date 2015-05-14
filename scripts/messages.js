@@ -66,11 +66,13 @@ Messages.LANGUAGE_PREF = 'language_pref';
 
 /** Set the language. */
 Messages.prototype.setLanguage = function(language) {
+  console.log('setting language to ' + language);
   if (language in LocalisedMessages) {
     this.language = language;
     DataStore.putString(Messages.LANGUAGE_PREF, language);
     return true;
   }
+  console.log('nope');
   return false;
 };
 
