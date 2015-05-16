@@ -41,16 +41,16 @@ LocalisedMessages["pt"] = {
     "message": "Não foi possível obter nenhuma informação de localidade (O serviço <i>geocoder</i> do Google teve um erro)",
   },
   "google-maps": {
-    "message": "Google Maps",
+    "message": "Ver no Google Maps",
   },
   "osm-maps": {
-    "message": "Open Street Map",
+    "message": "Ver no Open Street Map",
   },
   "bing-maps": {
-    "message": "Bing Maps",
+    "message": "Ver no Bing Maps",
   },
   "apple-maps": {
-    "message": "Apple Maps",
+    "message": "Ver no Apple Maps",
   },
   "apps": {
     "message": "Apps",
@@ -86,25 +86,25 @@ LocalisedMessages["pt"] = {
     "message": "Ajuda",
   },
   "ui-satellite": {
-    "message": "Satélite",
+    "message": "Modo satélite",
   },
   "ui-language": {
-    "message": "Língua",
+    "message": "Alterar idioma",
   },
   "ui-feedback": {
-    "message": "Comentários",
+    "message": "Enviar comentários",
   },
   "ui-github": {
-    "message": "Ver projeto",
+    "message": "Código fonte",
   },
   "dismiss": {
-    "message": "Fechar",
+    "message": "Ocultar",
   },
   "help-01-0": {
-    "message": "<h2>Your own personal postcode</h2><p>plus+codes are short codes for any location, anywhere. You can use them to guide people to your exact location, fast and reliably.</p>",
+    "message": "<h2>O seu código postal personalizado</h2><p>plus+codes são códigos curtos para qualquer localização. Pode usá-los para guiar pessoas à sua localização exata, de forma rápida e fiável.</p>",
   },
   "help-02-0": {
-    "message": "<h2>What is a plus+code?</h2><p>A plus+code is a short code made up of six or seven letters and numbers, like <b>$EXAMPLE_CODE$</b>, or combined with a town or city like this <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>They let you give someone an exact location that doesn't depend on street names or building numbers.</p>",
+    "message": "<h2>O que é um plus+code?</h2><p>Um plus+code é um código conciso, composto por seis ou sete letras e números, como <b>$EXAMPLE_CODE$</b>, ou combinado com o nome de uma localidade ou cidade, como <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Eles permitem comunicar uma localização exata que não depende de nomes de ruas ou números de portas.</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
@@ -112,7 +112,7 @@ LocalisedMessages["pt"] = {
     }
   },
   "help-02-1": {
-    "message": "<h2>How do I find out where a plus+code is?</h2><p>When you enter a plus+code (<b>$EXAMPLE_CODE$</b>) on your phone or computer, it will find the nearest match. This will return the correct location as long as you are within about 40 kilometers of the place.</p><p>If you are further away, use the town or city name (<b>$EXAMPLE_CODE$ Nairobi</b>), or enter the plus+code including the region code (<b>$FULL_CODE$</b>).</p>",
+    "message": "<h2>Como descubro onde fica um plus+code?</h2><p>Ao inserir um plus+code (<b>$EXAMPLE_CODE$</b>) no seu telemóvel ou computador, ele encontrará a correspondência mais próxima. Isto produzirá a localização correta desde que esteja num raio de 40 quilómetros do local.</p><p>Se estiver mais longe, use o nome da localidade ou cidade (<b>$EXAMPLE_CODE$ Nairobi</b>), ou insira o plus+code completo, incluindo o código de região (<b>$FULL_CODE$</b>).</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
@@ -123,10 +123,10 @@ LocalisedMessages["pt"] = {
     }
   },
   "help-02-2": {
-    "message": "<h2>Do I need to apply for a plus+code?</h2><p>No, plus+codes already exist for everywhere and anyone can use them for free.</p><p>To get the plus+code for a place just drag the map to highlight the place you want.</p>",
+    "message": "<h2>Tenho que me registar para ter um plus+code?</h2><p>Não é preciso. Os plus+codes já cobrem todo o planeta, e qualquer pessoa pode usá-los livremente.</p><p>Para obter o plus+code de um local, basta arrastar o mapa para realçar o local pretendido.</p>",
   },
   "help-03-0": {
-    "message": "<h2>What are the parts of the code?</h2><p>For our example code <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> is the region code (roughly 100 x 100 kilometers). <b>$CODE_PART_2$</b> is the city code (5 x 5 kilometers). <b>$CODE_PART_3$</b> is the neighbourhood code (250 x 250 meters). After the <b>+</b>, <b>$CODE_PART_4$</b> is the building code (14 x 14 meters). It can be followed by a single digit door code, if the building size code extends over more than one building.</p><p>Usually, the region code isn't needed, and sometimes you will be able to drop the city code as well.</p>",
+    "message": "<h2>Quais são as partes do código?</h2><p>Para o código de exemplo <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> é o código de região (aproximadamente 100 × 100 quilómetros). <b>$CODE_PART_2$</b> é o código de cidade (5 × 5 quilómetros). <b>$CODE_PART_3$</b> é o código de bairro (250 × 250 metros). Depois do <b>+</b>, <b>$CODE_PART_4$</b> é o código de edifício (14 × 14 metros). Pode ser acompanhado um código de porta com um dígito, se o tamanho do código de edifício cobrir mais que um edifício.</p><p>Por norma, o código de região não é necessário, e em certos casos é possível cortar também o código de cidade.</p>",
     "placeholders": {
       "FULL_CODE": {
         "content": "6GCRMQRG+59"
@@ -146,22 +146,22 @@ LocalisedMessages["pt"] = {
     }
   },
   "help-03-1": {
-    "message": "<h2>Does a location have more than one plus+code?</h2><p>No. Any place only has one plus+code.</p>",
+    "message": "<h2>Pode uma localização ter mais que um plus+code?</h2><p>Não. Cada local tem um plus+code único.</p>",
   },
   "help-03-2": {
-    "message": "<h2>Can I save them?</h2><p>To save a plus+code, just create a bookmark for the page. When you open the bookmark, it will show you the place.</p>",
+    "message": "<h2>Posso guardá-los?</h2><p>Para guardar um plus+code, basta criar um marcador para a página. Quando abrir o marcador, a página irá mostrar a localização correspondente.</p>",
   },
   "help-03-3": {
-    "message": "<h2>Can I use this when I don't have a network?</h2><p>Yes! After you have loaded this page on your phone or computer, it will keep a copy and let you load it even without a network connection.</p>",
+    "message": "<h2>Posso usar isto se não tiver acesso à Internet?</h2><p>Sim! Depois de ter aberto esta página no seu telemóvel ou computador, uma cópia será mantida que será carregada mesmo sem uma ligação à rede.</p>",
   },
   "help-03-4": {
-    "message": "<h2>Can I get directions?</h2><p>There is a compass mode that shows you the direction and distance from where you are to the current plus+code. The main menu has links to different map providers you can use.</p>",
+    "message": "<h2>Posso obter indicações de caminho?</h2><p>Há um modo de bússola, que mostra a direção e a distância de onde está para o local apontado pelo plus+code. O menu principal tem links para vários serviços de mapas que pode usar.</p>",
   },
   "help-03-5": {
-    "message": "<h2>My plus+code area is too large!</h2><p>If you zoom in further, the code will be for a smaller area.</p>",
+    "message": "<h2>A área do meu plus+code é muito grande!</h2><p>Se ampliar o mapa, o código cobrirá uma área menor.</p>",
   },
   "help-03-6": {
-    "message": "<h2>The address you show is wrong!</h2><p>The address given is just a suggestion. It is used to reduce the length of the code you need to use. You can try other addresses in the search box.</p>",
+    "message": "<h2>O endereço que isto mostra está errado!</h2><p>O endereço fornecido é apenas uma sugestão. É usado para reduzir o tamanho do código que tem que usar. Você pode experimentar outros endereços na barra de pesquisa.</p>",
   },
   "feedback-detail": {
     "message": "Envie os seus comentários. Diga-nos o que gosta ou o que não está a funcionar, e tentaremos melhorar.",
