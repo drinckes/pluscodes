@@ -22,41 +22,52 @@ function Help() {
 }
 Help.numPages = 3;
 Help.currentPage = 1;
+Help.dialog = null;
 
 Help.start = function() {
   Help.currentPage = 1;
-  var dialog = new Dialog('help', $('<section>'));
-  Help.display(Help.currentPage);
-  dialog.addButton($('<button>').addClass('previous').click(Help.clicked));
-  dialog.addButton($('<button>').addClass('dismiss').click(Help.clicked));
-  dialog.addButton($('<button>').addClass('next').click(Help.clicked));
+  Help.dialog = new Dialog('help', $('<section>').html(Help.getPageContent()));
+  Help.dialog.addButton($('<button>').addClass('previous').click(Help.clicked));
+  Help.dialog.addButton($('<button>').addClass('dismiss').click(Help.clicked));
+  Help.dialog.addButton($('<button>').addClass('next').click(Help.clicked));
   // Hide the previous button.
+  $('#help-controls').find('.previous').off('click');
   $('#help-controls').find('.previous').addClass('hide');
 };
 
 Help.clicked = function(e) {
-  if ($(this).hasClass('previous')) {
+  if ($(this).hasClass('previous') && Help.currentPage > 1) {
     Help.currentPage -= 1;
-  } else if ($(this).hasClass('next')) {
+  } else if ($(this).hasClass('next') && Help.currentPage < Help.numPages) {
     Help.currentPage += 1;
   } else if ($(this).hasClass('dismiss')) {
     Dialog.remove('help');
     return;
   }
-
-  if (Help.currentPage == 1) {
-    $('#help-controls .previous').addClass('hide');
-  } else if (Help.currentPage == Help.numPages) {
-    $('#help-controls .next').addClass('hide');
-  } else {
-    $('#help-controls button').removeClass('hide');
-  }
-  Help.display(Help.currentPage);
+  Help.adjustVisibility();
+  $('#help-dialog').fadeOut(function() {
+      $(this).html(Help.getPageContent());
+      $(this).fadeIn();
+  });
 };
 
-Help.display = function(pageNumber) {
-  Help.currentPage = pageNumber;
-  $('#help-dialog').fadeOut(function() {$(this).remove()});
+Help.adjustVisibility = function() {
+  // Default to display all the buttons.
+  $('#help-controls button').off('click');
+  $('#help-controls button').click(Help.clicked);
+  $('#help-controls button').removeClass('hide');
+  if (Help.currentPage == 1) {
+    // Hide the previous button on the first help page.
+    $('#help-controls .previous').off('click');
+    $('#help-controls .previous').addClass('hide');
+  } else if (Help.currentPage == Help.numPages) {
+    // Hide the next button on the last help page.
+    $('#help-controls .next').off('click');
+    $('#help-controls .next').addClass('hide');
+  }
+};
+
+Help.getPageContent = function() {
   var content = "";
   for (var i = 0; i <= 9; i++) {
     var section = messages.get('help-0' + Help.currentPage + '-' + i);
@@ -65,12 +76,5 @@ Help.display = function(pageNumber) {
     }
     content += section;
   }
-  // Create a new content container.
-  var dialog = $('<section>')
-      .attr('id', 'help-dialog')
-      .addClass('dialog')
-      .addClass('content')
-      .html(content).css('display', 'none');
-  dialog.insertBefore($('#help-controls'));
-  $(dialog).fadeIn();
+  return content;
 };

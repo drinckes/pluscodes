@@ -20,10 +20,11 @@
 function Dialog(id, jqueryContent, dismissCallback) {
   this.id = id;
 
-  // Remove existing dialogs.
-  $('#' + id + '-dialog').remove();
-  $('#' + id + '-controls').remove();
-  $('#' + id + '-fader').remove();
+  // Remove existing dialogs. Use id= match in case there are multiple elements
+  // with matching ids.
+  $('[id=' + id + '-dialog]').remove();
+  $('[id=' + id + '-controls]').remove();
+  $('[id=' + id + '-fader]').remove();
   // Add a fader - clicking on the fader will call the callback if passed,
   // or just dismisses the dialog.
   var fader = $('<div>').attr('id', id + '-fader').addClass('dialog-fader');
@@ -60,13 +61,13 @@ Dialog.prototype.addButton = function(jqueryObject) {
 };
 
 Dialog.prototype.remove = function() {
-  $('#' + this.id + '-controls').fadeOut(function() {$(this).remove()});
-  $('#' + this.id + '-dialog').fadeOut(function() {$(this).remove()});
-  $('#' + this.id + '-fader').fadeOut(function() {$(this).remove()});
+  $('[id=' + this.id + '-dialog]').fadeOut(function() {$(this).remove()});
+  $('[id=' + this.id + '-controls]').fadeOut(function() {$(this).remove()});
+  $('[id=' + this.id + '-fader]').fadeOut(function() {$(this).remove()});
 };
 
 Dialog.remove = function(id) {
-  $('#' + id + '-controls').fadeOut(function() {$(this).remove()});
-  $('#' + id + '-dialog').fadeOut(function() {$(this).remove()});
-  $('#' + id + '-fader').fadeOut(function() {$(this).remove()});
+  $('[id=' + id + '-dialog]').fadeOut(function() {$(this).remove()});
+  $('[id=' + id + '-controls]').fadeOut(function() {$(this).remove()});
+  $('[id=' + id + '-fader]').fadeOut(function() {$(this).remove()});
 };

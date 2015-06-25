@@ -134,7 +134,6 @@ function uiClick(e) {
     }
   }
   if (clickedId == 'nav_help') {
-    //helpStart();
     menuHide();
     Help.start();
   }
