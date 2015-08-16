@@ -420,7 +420,10 @@ function searchEntered() {
           }
         },
         function(error) {
-          InfoBox.setPanel('<span><p class="message">' + error + '</p></span>');
+          // Use jQuery to escape the error message to prevent XSS.
+          var escapedError = $("<div>").text(error).html();
+          InfoBox.setPanel(
+              '<span><p class="message">' + escapedError + '</p></span>');
         }
     );
   }
