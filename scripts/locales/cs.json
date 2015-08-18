@@ -1,0 +1,192 @@
+LocalisedMessages["cs"] = {
+  "input-prompt": {
+    "message": "Napište plus+code nebo adresu nebo posuňte mapu",
+    "description": "Text to display in the search box to tell a user how to interact with the application"
+  },
+  "map-error": {
+    "message": "Nepodařilo se načíst Google Mapy. Ujistěte se že jste připojeni k internetu a zkuste znovu načíst stránku<br/><br/>Můžete zadat plus+code i bez kódu oblasti a použít kompas, ale nebudete moci zadat adresu, nebo plus+code s adresou, dokud se nezobrazí mapa.",
+    "description": "Message to display when Google Maps can't be loaded"
+  },
+  "browser-problem-msg": {
+    "message": "Váš prohlížeč nepodporuje všechny doplňky které potřebujeme, jako je úmístění nebo kompas.<br/><br/>Doporučujeme použít Chrome, Firefox ne Operu.",
+    "description": "Message to show when the browser doesn't support location or orientation"
+  },
+  "geocoder-no-info": {
+    "message": "Geokódovací služba Googlu nenalezla tuto adresu v oblasti. Zkuste použít plus+kód s názvem většího města, pokud je nějaké do vzdálenosti 40km.",
+    "description": "If Google can't find any location name in the area"
+  },
+  "extend-failure-msg": {
+    "message": "To work out where $OLC$ is, we need your current location, or you need to include a town or city in the information.<br/><br/>Check that your browser is allowing location, and that location services are enabled on your device.",
+    "description": "Shown when the user location cannot be determined"
+  },
+  "geocode-not-loaded": {
+    "message": "Google's address service se nepodařilo načíst, $ADDRESS$ nelze nalézt.",
+    "description": "The address the user entered cannot be located, because the Google geocoding service isn't loaded"
+  },
+  "geocode-fail": {
+    "message": "Služba Google address nemůže nelézt $ADDRESS$.",
+    "description": "The address the user entered cannot be located"
+  },
+  "geocode-reverse-fail": {
+    "message": "Nepodařilo se načíst žádné informace o vašem umístění (Chyba je na straně Google geocoder služby)",
+    "description": "Google returned no address information for the location shown because the service had an unspecified error"
+  },
+  "google-maps": {
+    "message": "Google Maps",
+    "description": "Menu entry to link to see the current location in Google Maps"
+  },
+  "osm-maps": {
+    "message": "Open Street Map",
+    "description": "Menu entry to link to see the current location in Open Street Map"
+  },
+  "bing-maps": {
+    "message": "Bing Maps",
+    "description": "Menu entry to link to see the current location in Bing Maps"
+  },
+  "apple-maps": {
+    "message": "Apple Maps",
+    "description": "Menu entry to link to see the current location in Apple Maps"
+  },
+  "apps": {
+    "message": "Apps",
+    "description": "Menu entry to link to see the current location in a smartphone app. The phone should display a list and allow the user to select one."
+  },
+  "waiting-location": {
+    "message": "Zjišťování polohy...",
+    "description": "Displayed while waiting for the device location to be determined"
+  },
+  "units-km": {
+    "message": "km",
+    "description": "Used when displaying distances in kilometers"
+  },
+  "units-meters": {
+    "message": "metrů",
+    "description": "Used when displaying distances in meters"
+  },
+  "compass-check-msg": {
+    "message": "Nepodařilo se načíst informace z kompasu.<br/><br/>Abyste to vyzkoušeli, držte zařízení rovně a otáčejte s ním v kruhu.<br/><br/>Až ho úpně otočíte, klikněte na tlačítko níže.",
+    "description": "If the orientation of the device can't be determined, this asks the user to turn the device around in a circle to test it"
+  },
+  "compass-check-fail-msg": {
+    "message": "Kompas ve vašem zařízení nehlásí směr. Vaše zařízení ho možná nepodporuje a nebo nefunguje správně.",
+    "description": "The device does not have a compass, or it cannot be read correctly"
+  },
+  "compass-check-ok": {
+    "message": "Kompas ve vašem zařízení funguje perfektně!",
+    "description": "The compass on the device can be read and looks good"
+  },
+  "waiting-for-compass-1": {
+    "message": "Čekání na",
+    "description": "First half of 'waiting for compass reading' message"
+  },
+  "waiting-for-compass-2": {
+    "message": "kompas",
+    "description": "Second half of 'waiting for compass reading' message"
+  },
+  "location-prompt": {
+    "message": "Tato služba potřebuje použít vaší polohu. Pokud se vás prohlížeč zeptá, prosím povolte to.",
+    "description": "Notifies the user that they may be asked to share their location"
+  },
+  "ui-help": {
+    "message": "Pomoc",
+    "description": "Menu item to display the help information"
+  },
+  "ui-satellite": {
+    "message": "Satelitní",
+    "description": "Menu item to change the map imagery between satellite and the road map"
+  },
+  "ui-language": {
+    "message": "Jazyk",
+    "description": "Menu item to display the list of UI languages"
+  },
+  "ui-feedback": {
+    "message": "Zpětná vazba",
+    "description": "Menu item to display the form to provide feedback"
+  },
+  "ui-github": {
+    "message": "Zobrazit projekt",
+    "description": "Menu item to view the project source code on Github"
+  },
+  "dismiss": {
+    "message": "Zrušit",
+    "description": "Button used in dialog windows to dismiss them"
+  },
+  "help-01-0": {
+    "message": "<h2>Your own personal postcode</h2><p>plus+codes are short codes for any location, anywhere. You can use them to guide people to your exact location, fast and reliably.</p>",
+    "description": "First help page explaining what plus+codes are"
+  },
+  "help-02-0": {
+    "message": "<h2>Co e to plus+code?</h2><p>Plus+code je krátký kod ze šesti nebo sedmi písmen a čísel, například <b>$EXAMPLE_CODE$</b>, nebo kombinovaný s měatem, například <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Umožňuje vám sdělit přesnou polohu bez názvů ulic, nebo čísel budov.</p>",
+    "description": "Help page section",
+    "placeholders": {
+      "EXAMPLE_CODE": {
+        "content": "MQRG+59"
+      }
+    }
+  },
+  "help-02-1": {
+    "message": "<h2>Jak zjistím, kde se plus+code nachází?</h2><p>Když zadáte plus+code (<b>$EXAMPLE_CODE$</b>) na vašem telefonu nebo počítači, najdete nejbližší shodu. Takto získáte správnou polohu, pokud jste v okruhu 40km od daného místa.</p><p>Pokud se nacházíte dále použijte název města (<b>$EXAMPLE_CODE$ Nairobi</b>), nebo použijte plus+code spolu s kódem oblasti (<b>$FULL_CODE$</b>).</p>",
+    "description": "Help page section",
+    "placeholders": {
+      "EXAMPLE_CODE": {
+        "content": "MQRG+59"
+      },
+      "FULL_CODE": {
+        "content": "6GCRMQRG+59"
+      }
+    }
+  },
+  "help-02-2": {
+    "message": "<h2>Musím se registrovat abych mohl používat plus+code?</h2><p>Ne, plus+code už existují všude a každý je může volně používat.</p><p>K získání plus+code pro určité místo jenom posuňte mapu a vyznačte požadovanou oblast.</p>",
+    "description": "Help page section"
+  },
+  "help-03-0": {
+    "message": "<h2>Co znamenají jednotlivé části plus+code?</h2><p>Například kód <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> je kód regionu (přibližně 100 x 100 kilometrů). <b>$CODE_PART_2$</b> je kód města (5 x 5 kilometrů). <b>$CODE_PART_3$</b> je kód sousedství (250 x 250 meters). Za<b>+</b>, <b>$CODE_PART_4$</b> je kód budovy (14 x 14 metrů). Může být následován jednočíselným kódem dveří, Pokud kód budovy sahá přes více staveb.</p><p>Obvykle není kód regionu nutný a někdy nemusíte použít ani kód města.</p>",
+    "description": "Help page section giving the structure of the codes",
+    "placeholders": {
+      "FULL_CODE": {
+        "content": "6GCRMQRG+59"
+      },
+      "CODE_PART_1": {
+        "content": "6GCR"
+      },
+      "CODE_PART_2": {
+        "content": "MQ"
+      },
+      "CODE_PART_3": {
+        "content": "RG"
+      },
+      "CODE_PART_4": {
+        "content": "59"
+      }
+    }
+  },
+  "help-03-1": {
+    "message": "<h2>Má místo více než jeden plus+code?</h2><p>Ne. Každé místo má jenom jeden plus+code.</p>",
+    "description": "Help page section"
+  },
+  "help-03-2": {
+    "message": "<h2>Můžu si kódy uložit?</h2><p>K uložení plus+code, stačí vytvořit záložku. Když jí otevřete, ukáže vám dané místo.</p>",
+    "description": "Help page section"
+  },
+  "help-03-3": {
+    "message": "<h2>Můžu to používat i když jsem bez internetu?</h2><p>Ano! Poté co načtete tuto stránku do svého počítače nebo telefonu, Uloží se kopie díky níž budete moci míst načíst i bez internetu.</p>",
+    "description": "Help page section telling the user that it should work offline"
+  },
+  "help-03-4": {
+    "message": "<h2>Můžu získat směr?</h2><p>K tomu slouží kompas mód který vám ukáže směr a vzdálenost od plus+code. Hlavní menu odkazuje na mapy jiných poskytovatelů, které můžete použít.</p>",
+    "description": "Help page section"
+  },
+  "help-03-5": {
+    "message": "<h2>Moje plus+code oblast je příliš velká!</h2><p>Když více zazoomujete, k=od bude pro menší oblast.</p>",
+    "description": "Help page section"
+  },
+  "help-03-6": {
+    "message": "<h2>Adresa, kterou ukazujete je špatně!</h2><p>Adresa je pouze odhad. Je použita pouze ke zkrácení delky kódu který si musíte zapamatovat nebo uložit. Můžete zkusit vyhledat jiné adresy.</p>",
+    "description": "Help page section"
+  },
+  "feedback-detail": {
+    "message": "Poslat zpětnou vazbu. Dejte nám vědět co se vám líbí, nebo co nefunguje a my se pokusíme to opravit.",
+    "description": "Message"
+  }
+};
