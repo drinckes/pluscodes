@@ -4,8 +4,3 @@ RewriteEngine On
 
 # Rewrite URLs that start with +<OLC code> to index.html
 RewriteRule ^\+ index.html [NC,L,NE]
-
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /home/lneaprlw/pluscodes/htpasswd
-Require valid-user

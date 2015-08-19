@@ -1,164 +1,164 @@
 LocalisedMessages["es"] = {
   "apple-maps": {
-    "message": "Apple Maps"
+    "m": "Apple Maps"
   },
   "apps": {
-    "message": "Aplicaciones"
+    "m": "Aplicaciones"
   },
   "bing-maps": {
-    "message": "Bing Maps"
+    "m": "Bing Maps"
   },
   "browser-problem-msg": {
-    "message": "El navegador que utilizas no admite todas las funciones que necesitamos, como la ubicación y la brújula.<br/><br/>Te recomendamos que utilices Chrome, Firefox u Opera."
+    "m": "El navegador que utilizas no admite todas las funciones que necesitamos, como la ubicación y la brújula.<br/><br/>Te recomendamos que utilices Chrome, Firefox u Opera."
   },
   "compass-check-fail-msg": {
-    "message": "La brújula de tu dispositivo no apunta a ninguna dirección. Puede ser que no sea compatible con tu dispositivo o que no funcione correctamente."
+    "m": "La brújula de tu dispositivo no apunta a ninguna dirección. Puede ser que no sea compatible con tu dispositivo o que no funcione correctamente."
   },
   "compass-check-msg": {
-    "message": "Es posible que haya surgido un problema al leer la brújula.<br/><br/>Para probarla, mantén el dispositivo en posición horizontal y gira sobre ti mismo 360º.<br/><br/>Cuando hayas dado toda la vuelta, toca el botón que aparece debajo."
+    "m": "Es posible que haya surgido un problema al leer la brújula.<br/><br/>Para probarla, mantén el dispositivo en posición horizontal y gira sobre ti mismo 360º.<br/><br/>Cuando hayas dado toda la vuelta, toca el botón que aparece debajo."
   },
   "compass-check-ok": {
-    "message": "La brújula del dispositivo funciona bien."
+    "m": "La brújula del dispositivo funciona bien."
   },
   "discuss": {
-    "message": "Foro de debate"
+    "m": "Foro de debate"
   },
   "dismiss": {
-    "message": "Ignorar"
+    "m": "Ignorar"
   },
   "extend-failure-msg": {
-    "message": "Para determinar la ubicación de $OLC$, necesitamos tu ubicación actual o que incluyas una ciudad o una población en la información que proporcionas.<br/><br/>Comprueba que el navegador admita la función de ubicación y que los servicios de ubicación estén habilitados en tu dispositivo.",
-    "placeholders": {
+    "m": "Para determinar la ubicación de $OLC$, necesitamos tu ubicación actual o que incluyas una ciudad o una población en la información que proporcionas.<br/><br/>Comprueba que el navegador admita la función de ubicación y que los servicios de ubicación estén habilitados en tu dispositivo.",
+    "p": {
       "OLC": {}
     }
   },
   "feedback-detail": {
-    "message": "Envía sugerencias. Dinos qué te gusta o qué no funciona e intentaremos mejorarlo."
+    "m": "Envía sugerencias. Dinos qué te gusta o qué no funciona e intentaremos mejorarlo."
   },
   "geocode-fail": {
-    "message": "El servicio de direcciones de Google no puede localizar $ADDRESS$.",
-    "placeholders": {
+    "m": "El servicio de direcciones de Google no puede localizar $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-not-loaded": {
-    "message": "El servicio de direcciones de Google no está cargado, por lo que no es posible localizar $ADDRESS$.",
-    "placeholders": {
+    "m": "El servicio de direcciones de Google no está cargado, por lo que no es posible localizar $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-reverse-fail": {
-    "message": "No se ha podido obtener ninguna información de la localidad (se ha producido un error en el servicio de codificador geográfico de Google)"
+    "m": "No se ha podido obtener ninguna información de la localidad (se ha producido un error en el servicio de codificador geográfico de Google)"
   },
   "geocoder-no-info": {
-    "message": "El servicio de codificador geográfico de Google no tiene ninguna información de dirección de esta área. Puedes utilizar un código plus+code con el nombre de una ciudad grande, si hay alguna en un radio de 40 km a la redonda."
+    "m": "El servicio de codificador geográfico de Google no tiene ninguna información de dirección de esta área. Puedes utilizar un código plus+code con el nombre de una ciudad grande, si hay alguna en un radio de 40 km a la redonda."
   },
   "google-maps": {
-    "message": "Google Maps"
+    "m": "Google Maps"
   },
   "help-01-0": {
-    "message": "<h2>Tu propio código postal personal</h2><p>Los códigos plus+code son códigos cortos de ubicaciones de todo el mundo. Puedes utilizarlos para guiar a otros usuarios hasta tu ubicación exacta de forma rápida y fiable.</p>"
+    "m": "<h2>Tu propio código postal personal</h2><p>Los códigos plus+code son códigos cortos de ubicaciones de todo el mundo. Puedes utilizarlos para guiar a otros usuarios hasta tu ubicación exacta de forma rápida y fiable.</p>"
   },
   "help-02-0": {
-    "message": "<h2>¿Qué es un código plus+code?</h2><p>Un código plus+code es un código corto formado por seis o siete letras y números, como <b>$EXAMPLE_CODE$</b>, o combinado con una ciudad o población como este ejemplo: <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Estos códigos permiten indicar a otros usuarios una ubicación exacta sin utilizar nombres de calles ni números de edificios.</p>",
-    "placeholders": {
+    "m": "<h2>¿Qué es un código plus+code?</h2><p>Un código plus+code es un código corto formado por seis o siete letras y números, como <b>$EXAMPLE_CODE$</b>, o combinado con una ciudad o población como este ejemplo: <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Estos códigos permiten indicar a otros usuarios una ubicación exacta sin utilizar nombres de calles ni números de edificios.</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       }
     }
   },
   "help-02-1": {
-    "message": "<h2>¿Cómo puedo localizar la ubicación que indica un código plus+code?</h2><p>Cuando introduces un código plus+code (<b>$EXAMPLE_CODE$</b>) en el teléfono o en el equipo, este buscará el punto de referencia más cercano que coincida con este parámetro y se te mostrará la ubicación correcta si te hallas en un radio de 40 kilómetros de distancia del lugar en cuestión.</p><p>Si te encuentras más lejos, utiliza el nombre de la ciudad o la población (<b>$EXAMPLE_CODE$ Nairobi</b>), o introduce el código plus+code con el código de región (<b>$FULL_CODE$</b>).</p>",
-    "placeholders": {
+    "m": "<h2>¿Cómo puedo localizar la ubicación que indica un código plus+code?</h2><p>Cuando introduces un código plus+code (<b>$EXAMPLE_CODE$</b>) en el teléfono o en el equipo, este buscará el punto de referencia más cercano que coincida con este parámetro y se te mostrará la ubicación correcta si te hallas en un radio de 40 kilómetros de distancia del lugar en cuestión.</p><p>Si te encuentras más lejos, utiliza el nombre de la ciudad o la población (<b>$EXAMPLE_CODE$ Nairobi</b>), o introduce el código plus+code con el código de región (<b>$FULL_CODE$</b>).</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-02-2": {
-    "message": "<h2>¿Los códigos plus+code tienen que solicitarse?</h2><p>No, estos códigos ya existen para todas las ubicaciones y son de uso gratuito.</p><p>Para obtener el código plus+code de un lugar, solo tienes que arrastrar el mapa para destacar el lugar en cuestión.</p>"
+    "m": "<h2>¿Los códigos plus+code tienen que solicitarse?</h2><p>No, estos códigos ya existen para todas las ubicaciones y son de uso gratuito.</p><p>Para obtener el código plus+code de un lugar, solo tienes que arrastrar el mapa para destacar el lugar en cuestión.</p>"
   },
   "help-03-0": {
-    "message": "<h2>¿Cuáles son las partes del código?</h2><p>En el caso de nuestro ejemplo <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> es el código de región (100 x 100 kilómetros aproximadamente), <b>$CODE_PART_2$</b> es el código de ciudad (5 x 5 kilómetros) y <b>$CODE_PART_3$</b> es el código de barrio (250 x 250 metros). Después del signo <b>+</b>, <b>$CODE_PART_4$</b> constituye el código de edificio (14 x 14 metros). Puede ir seguido de un código de portal de un solo dígito si el código de tamaño de edificio abarca más de un edificio.</p><p>Normalmente, el código de región no es necesario y, a veces, puede que también tengas que quitar el código de ciudad.</p>",
-    "placeholders": {
+    "m": "<h2>¿Cuáles son las partes del código?</h2><p>En el caso de nuestro ejemplo <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> es el código de región (100 x 100 kilómetros aproximadamente), <b>$CODE_PART_2$</b> es el código de ciudad (5 x 5 kilómetros) y <b>$CODE_PART_3$</b> es el código de barrio (250 x 250 metros). Después del signo <b>+</b>, <b>$CODE_PART_4$</b> constituye el código de edificio (14 x 14 metros). Puede ir seguido de un código de portal de un solo dígito si el código de tamaño de edificio abarca más de un edificio.</p><p>Normalmente, el código de región no es necesario y, a veces, puede que también tengas que quitar el código de ciudad.</p>",
+    "p": {
       "CODE_PART_1": {
-        "content": "6GCR"
+        "c": "6GCR"
       },
       "CODE_PART_2": {
-        "content": "MQ"
+        "c": "MQ"
       },
       "CODE_PART_3": {
-        "content": "RG"
+        "c": "RG"
       },
       "CODE_PART_4": {
-        "content": "59"
+        "c": "59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-03-1": {
-    "message": "<h2>¿Una ubicación tiene más de un código plus+code?</h2><p>No, cada lugar tiene un único código plus+code.</p>"
+    "m": "<h2>¿Una ubicación tiene más de un código plus+code?</h2><p>No, cada lugar tiene un único código plus+code.</p>"
   },
   "help-03-2": {
-    "message": "<h2>¿Puedo guardarlos?</h2><p>Para guardar un código plus+code, solo tienes que crear un marcador de la página. Cuando abras el marcador, te mostrará el lugar en cuestión.</p>"
+    "m": "<h2>¿Puedo guardarlos?</h2><p>Para guardar un código plus+code, solo tienes que crear un marcador de la página. Cuando abras el marcador, te mostrará el lugar en cuestión.</p>"
   },
   "help-03-3": {
-    "message": "<h2>¿Puedo utilizar esto cuando no tenga conexión de red?</h2><p>Sí. Una vez que hayas cargado esta página en el teléfono o en el equipo, se guardará una copia y podrás cargarla aunque no tengas conexión de red.</p>"
+    "m": "<h2>¿Puedo utilizar esto cuando no tenga conexión de red?</h2><p>Sí. Una vez que hayas cargado esta página en el teléfono o en el equipo, se guardará una copia y podrás cargarla aunque no tengas conexión de red.</p>"
   },
   "help-03-4": {
-    "message": "<h2>¿Puedo obtener indicaciones?</h2><p>Hay un modo de brújula que muestra la dirección en la que debes ir y la distancia hasta el código plus+code desde tu ubicación actual. El menú principal contiene enlaces a varios proveedores de mapas que puedes utilizar.</p>"
+    "m": "<h2>¿Puedo obtener indicaciones?</h2><p>Hay un modo de brújula que muestra la dirección en la que debes ir y la distancia hasta el código plus+code desde tu ubicación actual. El menú principal contiene enlaces a varios proveedores de mapas que puedes utilizar.</p>"
   },
   "help-03-5": {
-    "message": "<h2>El área de mi código plus+code es demasiado grande.</h2><p>Si aumentas la imagen, el código será para un área más pequeña.</p>"
+    "m": "<h2>El área de mi código plus+code es demasiado grande.</h2><p>Si aumentas la imagen, el código será para un área más pequeña.</p>"
   },
   "help-03-6": {
-    "message": "<h2>La dirección que muestras no es correcta.</h2><p>La dirección indicada solo es una sugerencia, sirve para acortar el código que tienes que utilizar. Puedes probar otras direcciones del cuadro de búsqueda.</p>"
+    "m": "<h2>La dirección que muestras no es correcta.</h2><p>La dirección indicada solo es una sugerencia, sirve para acortar el código que tienes que utilizar. Puedes probar otras direcciones del cuadro de búsqueda.</p>"
   },
   "input-prompt": {
-    "message": "Introduce un código plus+code, una dirección o arrastra el mapa"
+    "m": "Introduce un código plus+code, una dirección o arrastra el mapa"
   },
   "location-prompt": {
-    "message": "Este servicio necesita utilizar tu ubicación. Si el navegador te lo solicita, autorízaselo."
+    "m": "Este servicio necesita utilizar tu ubicación. Si el navegador te lo solicita, autorízaselo."
   },
   "map-error": {
-    "message": "No se puede cargar Google Maps. Asegúrate de que la red esté operativa e intenta cargar la página de nuevo.<br/><br/>Puedes introducir códigos plus+code con o sin el prefijo y utilizar la brújula, pero no podrás introducir direcciones ni códigos plus+code con direcciones hasta que se muestren los mapas."
+    "m": "No se puede cargar Google Maps. Asegúrate de que la red esté operativa e intenta cargar la página de nuevo.<br/><br/>Puedes introducir códigos plus+code con o sin el prefijo y utilizar la brújula, pero no podrás introducir direcciones ni códigos plus+code con direcciones hasta que se muestren los mapas."
   },
   "osm-maps": {
-    "message": "Open Street Map"
+    "m": "Open Street Map"
   },
   "ui-feedback": {
-    "message": "Comentarios"
+    "m": "Comentarios"
   },
   "ui-github": {
-    "message": "Ver proyecto"
+    "m": "Ver proyecto"
   },
   "ui-help": {
-    "message": "Ayuda"
+    "m": "Ayuda"
   },
   "ui-language": {
-    "message": "Idioma"
+    "m": "Idioma"
   },
   "ui-satellite": {
-    "message": "Satélite"
+    "m": "Satélite"
   },
   "units-km": {
-    "message": "km"
+    "m": "km"
   },
   "units-meters": {
-    "message": "metros"
+    "m": "metros"
   },
   "waiting-for-compass-1": {
-    "message": "Esperando la"
+    "m": "Esperando la"
   },
   "waiting-for-compass-2": {
-    "message": "lectura de la brújula"
+    "m": "lectura de la brújula"
   },
   "waiting-location": {
-    "message": "Esperando ubicación..."
+    "m": "Esperando ubicación..."
   }
 }

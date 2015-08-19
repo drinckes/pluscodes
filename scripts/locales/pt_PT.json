@@ -1,165 +1,165 @@
 // Although this is pt-PT, save it as pt so it works for browsers whose language setting is either pt-PT and pt.
 LocalisedMessages["pt"] = {
   "apple-maps": {
-    "message": "Apple Maps"
+    "m": "Apple Maps"
   },
   "apps": {
-    "message": "Aplicações"
+    "m": "Aplicações"
   },
   "bing-maps": {
-    "message": "Bing Maps"
+    "m": "Bing Maps"
   },
   "browser-problem-msg": {
-    "message": "O navegador utilizado não suporta todas as funcionalidades de que precisamos, como a localização e a bússola.<br/><br/>Recomendamos a utilização do Chrome, do Firefox ou do Opera."
+    "m": "O navegador utilizado não suporta todas as funcionalidades de que precisamos, como a localização e a bússola.<br/><br/>Recomendamos a utilização do Chrome, do Firefox ou do Opera."
   },
   "compass-check-fail-msg": {
-    "message": "A bússola do seu dispositivo não está a indicar a direção. É possível que o dispositivo não suporte a bússola ou que esta não esteja a funcionar corretamente."
+    "m": "A bússola do seu dispositivo não está a indicar a direção. É possível que o dispositivo não suporte a bússola ou que esta não esteja a funcionar corretamente."
   },
   "compass-check-msg": {
-    "message": "Poderá ocorrer um problema com a leitura da bússola.<br/><br/>Para testá-la, segure o dispositivo na horizontal e rode-o perfazendo um círculo.<br/><br/>Após rodá-lo completamente, toque no botão abaixo."
+    "m": "Poderá ocorrer um problema com a leitura da bússola.<br/><br/>Para testá-la, segure o dispositivo na horizontal e rode-o perfazendo um círculo.<br/><br/>Após rodá-lo completamente, toque no botão abaixo."
   },
   "compass-check-ok": {
-    "message": "A bússola do seu dispositivo parece estar a funcionar."
+    "m": "A bússola do seu dispositivo parece estar a funcionar."
   },
   "discuss": {
-    "message": "Discutir"
+    "m": "Discutir"
   },
   "dismiss": {
-    "message": "Ignorar"
+    "m": "Ignorar"
   },
   "extend-failure-msg": {
-    "message": "Para determinar onde fica $OLC$, precisamos que nos forneça a sua localização atual ou que inclua uma localidade ou cidade nas informações.<br/><br/>Confirme se o seu navegador está a permitir o acesso à localização e se os serviços de localização estão ativados no seu dispositivo.",
-    "placeholders": {
+    "m": "Para determinar onde fica $OLC$, precisamos que nos forneça a sua localização atual ou que inclua uma localidade ou cidade nas informações.<br/><br/>Confirme se o seu navegador está a permitir o acesso à localização e se os serviços de localização estão ativados no seu dispositivo.",
+    "p": {
       "OLC": {}
     }
   },
   "feedback-detail": {
-    "message": "Envie comentários. Diga-nos do que gosta e o que não está a funcionar, para tentarmos melhorar esses aspetos."
+    "m": "Envie comentários. Diga-nos do que gosta e o que não está a funcionar, para tentarmos melhorar esses aspetos."
   },
   "geocode-fail": {
-    "message": "O serviço de endereços da Google não consegue localizar $ADDRESS$.",
-    "placeholders": {
+    "m": "O serviço de endereços da Google não consegue localizar $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-not-loaded": {
-    "message": "O serviço de endereços da Google não foi carregado, pelo que não é possível localizar $ADDRESS$.",
-    "placeholders": {
+    "m": "O serviço de endereços da Google não foi carregado, pelo que não é possível localizar $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-reverse-fail": {
-    "message": "Não foi possível obter informações de localidade (ocorreu um erro com o serviço geocodificador da Google)"
+    "m": "Não foi possível obter informações de localidade (ocorreu um erro com o serviço geocodificador da Google)"
   },
   "geocoder-no-info": {
-    "message": "O serviço geocodificador da Google não possui informações de endereço nesta área. Poderá conseguir utilizar um código+ com o nome de uma cidade grande, se houver uma num raio de 40 km."
+    "m": "O serviço geocodificador da Google não possui informações de endereço nesta área. Poderá conseguir utilizar um código+ com o nome de uma cidade grande, se houver uma num raio de 40 km."
   },
   "google-maps": {
-    "message": "Google Maps"
+    "m": "Google Maps"
   },
   "help-01-0": {
-    "message": "<h2>Os seus códigos+ de código postal pessoais</h2><p> são códigos curtos para qualquer localização, em qualquer lugar. Pode utilizá-los para ajudar as pessoas a encontrarem a sua localização exata de uma forma rápida e fiável.</p>"
+    "m": "<h2>Os seus códigos+ de código postal pessoais</h2><p> são códigos curtos para qualquer localização, em qualquer lugar. Pode utilizá-los para ajudar as pessoas a encontrarem a sua localização exata de uma forma rápida e fiável.</p>"
   },
   "help-02-0": {
-    "message": "<h2>O que é um código+?</h2><p>Um código+ é um código curto composto por seis ou sete letras e números, como <b>$EXAMPLE_CODE$</b>, ou com uma combinação de uma localidade ou cidade como <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Este código permite-lhe dar a alguém uma localização exata que não depende de nomes de rua ou números de edifícios.</p>",
-    "placeholders": {
+    "m": "<h2>O que é um código+?</h2><p>Um código+ é um código curto composto por seis ou sete letras e números, como <b>$EXAMPLE_CODE$</b>, ou com uma combinação de uma localidade ou cidade como <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Este código permite-lhe dar a alguém uma localização exata que não depende de nomes de rua ou números de edifícios.</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       }
     }
   },
   "help-02-1": {
-    "message": "<h2>Como descubro onde fica um código+?</h2><p>Quando introduz um código+(<b>$EXAMPLE_CODE$</b>) no seu telemóvel ou no computador, este vai encontrar a correspondência mais próxima. Vai devolver a localização correta, desde que esteja a cerca de 40 quilómetros do local.</p><p>Se estiver mais distante, utilize o nome da localidade ou da cidade (<b>$EXAMPLE_CODE$ Nairobi</b>), ou introduza o código+ incluindo o código da região (<b>$FULL_CODE$</b>).</p>",
-    "placeholders": {
+    "m": "<h2>Como descubro onde fica um código+?</h2><p>Quando introduz um código+(<b>$EXAMPLE_CODE$</b>) no seu telemóvel ou no computador, este vai encontrar a correspondência mais próxima. Vai devolver a localização correta, desde que esteja a cerca de 40 quilómetros do local.</p><p>Se estiver mais distante, utilize o nome da localidade ou da cidade (<b>$EXAMPLE_CODE$ Nairobi</b>), ou introduza o código+ incluindo o código da região (<b>$FULL_CODE$</b>).</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-02-2": {
-    "message": "<h2>Preciso de me candidatar à obtenção de um código+?</h2><p>Não, os códigos+ já estão disponíveis e qualquer pessoa pode utilizá-los gratuitamente.</p><p>Para obter o código+ para um local, basta arrastar o mapa para realçar o local pretendido.</p>"
+    "m": "<h2>Preciso de me candidatar à obtenção de um código+?</h2><p>Não, os códigos+ já estão disponíveis e qualquer pessoa pode utilizá-los gratuitamente.</p><p>Para obter o código+ para um local, basta arrastar o mapa para realçar o local pretendido.</p>"
   },
   "help-03-0": {
-    "message": "<h2>Quais são os elementos do código?</h2><p>No nosso código de exemplo <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> é o código da região (cerca de 100 x 100 quilómetros). <b>$CODE_PART_2$</b> é o código da cidade (5 x 5 quilómetros). <b>$CODE_PART_3$</b> é o código da vizinhança (250 x 250 metros). A seguir ao <b>+</b>, vem <b>$CODE_PART_4$</b> que é o código do edifício (14 x 14 metros). Pode ser seguido de um código de porta de um só dígito, se o código do edifício abranger mais de um edifício.</p><p>Normalmente, o código da região não é necessário e, por vezes, também pode ignorar o código da cidade.</p>",
-    "placeholders": {
+    "m": "<h2>Quais são os elementos do código?</h2><p>No nosso código de exemplo <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> é o código da região (cerca de 100 x 100 quilómetros). <b>$CODE_PART_2$</b> é o código da cidade (5 x 5 quilómetros). <b>$CODE_PART_3$</b> é o código da vizinhança (250 x 250 metros). A seguir ao <b>+</b>, vem <b>$CODE_PART_4$</b> que é o código do edifício (14 x 14 metros). Pode ser seguido de um código de porta de um só dígito, se o código do edifício abranger mais de um edifício.</p><p>Normalmente, o código da região não é necessário e, por vezes, também pode ignorar o código da cidade.</p>",
+    "p": {
       "CODE_PART_1": {
-        "content": "6GCR"
+        "c": "6GCR"
       },
       "CODE_PART_2": {
-        "content": "MQ"
+        "c": "MQ"
       },
       "CODE_PART_3": {
-        "content": "RG"
+        "c": "RG"
       },
       "CODE_PART_4": {
-        "content": "59"
+        "c": "59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-03-1": {
-    "message": "<h2>Uma localização pode ter mais de um código+?</h2><p>Não. Qualquer local tem apenas um código+.</p>"
+    "m": "<h2>Uma localização pode ter mais de um código+?</h2><p>Não. Qualquer local tem apenas um código+.</p>"
   },
   "help-03-2": {
-    "message": "<h2>Posso guardá-lo?</h2><p>Para guardar um código+, basta criar um marcador para a página. Quando abrir o marcador, este vai mostrar o local.</p>"
+    "m": "<h2>Posso guardá-lo?</h2><p>Para guardar um código+, basta criar um marcador para a página. Quando abrir o marcador, este vai mostrar o local.</p>"
   },
   "help-03-3": {
-    "message": "<h2>Posso utilizá-lo quando não tiver rede?</h2><p>Sim. Após carregar esta página no seu telemóvel ou no computador, é criada uma cópia da página, a qual vai poder carregar mesmo que não tenha ligação à rede.</p>"
+    "m": "<h2>Posso utilizá-lo quando não tiver rede?</h2><p>Sim. Após carregar esta página no seu telemóvel ou no computador, é criada uma cópia da página, a qual vai poder carregar mesmo que não tenha ligação à rede.</p>"
   },
   "help-03-4": {
-    "message": "<h2>Posso obter direções?</h2><p>Existe um modo de bússola que lhe mostra a direção e a distância de onde está em relação ao código+ atual. O menu principal tem links para os diferentes fornecedores de mapas que pode utilizar.</p>"
+    "m": "<h2>Posso obter direções?</h2><p>Existe um modo de bússola que lhe mostra a direção e a distância de onde está em relação ao código+ atual. O menu principal tem links para os diferentes fornecedores de mapas que pode utilizar.</p>"
   },
   "help-03-5": {
-    "message": "<h2>A área do meu código+ é demasiado grande.</h2><p>Se aumentar mais o zoom, a área do código fica mais pequena.</p>"
+    "m": "<h2>A área do meu código+ é demasiado grande.</h2><p>Se aumentar mais o zoom, a área do código fica mais pequena.</p>"
   },
   "help-03-6": {
-    "message": "<h2>O endereço mostrado está errado.</h2><p>O endereço fornecido é apenas uma sugestão. É utilizado para reduzir o comprimento do código que precisa de utilizar. Pode experimentar outros endereços na caixa de pesquisa.</p>"
+    "m": "<h2>O endereço mostrado está errado.</h2><p>O endereço fornecido é apenas uma sugestão. É utilizado para reduzir o comprimento do código que precisa de utilizar. Pode experimentar outros endereços na caixa de pesquisa.</p>"
   },
   "input-prompt": {
-    "message": "Introduza um código+, um endereço ou arraste o mapa"
+    "m": "Introduza um código+, um endereço ou arraste o mapa"
   },
   "location-prompt": {
-    "message": "Este serviço precisa de utilizar a sua localização. Se o navegador lhe pedir acesso, autorize-o."
+    "m": "Este serviço precisa de utilizar a sua localização. Se o navegador lhe pedir acesso, autorize-o."
   },
   "map-error": {
-    "message": "Não é possível carregar o Google Maps. Certifique-se de que tem uma rede a funcionar e experimente atualizar a página.<br/><br/>Pode introduzir os códigos+ com ou sem o indicativo e utilizar a bússola, mas só vai conseguir introduzir endereços ou códigos+ com endereços quando forem apresentados mapas."
+    "m": "Não é possível carregar o Google Maps. Certifique-se de que tem uma rede a funcionar e experimente atualizar a página.<br/><br/>Pode introduzir os códigos+ com ou sem o indicativo e utilizar a bússola, mas só vai conseguir introduzir endereços ou códigos+ com endereços quando forem apresentados mapas."
   },
   "osm-maps": {
-    "message": "Open Street Map"
+    "m": "Open Street Map"
   },
   "ui-feedback": {
-    "message": "Comentários"
+    "m": "Comentários"
   },
   "ui-github": {
-    "message": "Ver projeto"
+    "m": "Ver projeto"
   },
   "ui-help": {
-    "message": "Ajuda"
+    "m": "Ajuda"
   },
   "ui-language": {
-    "message": "Idioma"
+    "m": "Idioma"
   },
   "ui-satellite": {
-    "message": "Satélite"
+    "m": "Satélite"
   },
   "units-km": {
-    "message": "km"
+    "m": "km"
   },
   "units-meters": {
-    "message": "metros"
+    "m": "metros"
   },
   "waiting-for-compass-1": {
-    "message": "A aguardar a"
+    "m": "A aguardar a"
   },
   "waiting-for-compass-2": {
-    "message": "leitura da bússola"
+    "m": "leitura da bússola"
   },
   "waiting-location": {
-    "message": "A aguardar localização..."
+    "m": "A aguardar localização..."
   }
 }

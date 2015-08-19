@@ -1,164 +1,164 @@
 LocalisedMessages["id"] = {
   "apple-maps": {
-    "message": "Apple Maps"
+    "m": "Apple Maps"
   },
   "apps": {
-    "message": "Aplikasi"
+    "m": "Aplikasi"
   },
   "bing-maps": {
-    "message": "Bing Maps"
+    "m": "Bing Maps"
   },
   "browser-problem-msg": {
-    "message": "Browser yang Anda gunakan tidak mendukung semua fitur yang kami butuhkan, seperti lokasi dan kompas.<br/><br/>Sebaiknya gunakan Chrome, Firefox, atau Opera."
+    "m": "Browser yang Anda gunakan tidak mendukung semua fitur yang kami butuhkan, seperti lokasi dan kompas.<br/><br/>Sebaiknya gunakan Chrome, Firefox, atau Opera."
   },
   "compass-check-fail-msg": {
-    "message": "Kompas pada perangkat Anda tidak melaporkan arah. Kompas mungkin tidak didukung oleh perangkat Anda, atau mungkin tidak berfungsi dengan baik."
+    "m": "Kompas pada perangkat Anda tidak melaporkan arah. Kompas mungkin tidak didukung oleh perangkat Anda, atau mungkin tidak berfungsi dengan baik."
   },
   "compass-check-msg": {
-    "message": "Mungkin terjadi masalah dalam membaca kompas.<br/><br/>Untuk mengujinya, pegang perangkat dalam posisi datar dan putar membentuk lingkaran.<br/><br/>Setelah memutar penuh, ketuk tombol di bawah."
+    "m": "Mungkin terjadi masalah dalam membaca kompas.<br/><br/>Untuk mengujinya, pegang perangkat dalam posisi datar dan putar membentuk lingkaran.<br/><br/>Setelah memutar penuh, ketuk tombol di bawah."
   },
   "compass-check-ok": {
-    "message": "Kompas pada perangkat Anda tampak tidak bermasalah!"
+    "m": "Kompas pada perangkat Anda tampak tidak bermasalah!"
   },
   "discuss": {
-    "message": "Diskusikan"
+    "m": "Diskusikan"
   },
   "dismiss": {
-    "message": "Tutup"
+    "m": "Tutup"
   },
   "extend-failure-msg": {
-    "message": "Untuk mencari tahu lokasi $OLC$, kami perlu mengetahui lokasi Anda saat ini, atau Anda harus mencantumkan kota pada informasi.<br/><br/>Pastikan browser Anda mengizinkan lokasi, dan layanan lokasi diaktifkan pada perangkat Anda.",
-    "placeholders": {
+    "m": "Untuk mencari tahu lokasi $OLC$, kami perlu mengetahui lokasi Anda saat ini, atau Anda harus mencantumkan kota pada informasi.<br/><br/>Pastikan browser Anda mengizinkan lokasi, dan layanan lokasi diaktifkan pada perangkat Anda.",
+    "p": {
       "OLC": {}
     }
   },
   "feedback-detail": {
-    "message": "Kirim masukan. Beri tahu kami apa yang Anda suka, atau apa yang tidak berfungsi dan kami akan berusaha untuk memperbaikinya."
+    "m": "Kirim masukan. Beri tahu kami apa yang Anda suka, atau apa yang tidak berfungsi dan kami akan berusaha untuk memperbaikinya."
   },
   "geocode-fail": {
-    "message": "Layanan alamat Google tidak dapat menemukan $ADDRESS$.",
-    "placeholders": {
+    "m": "Layanan alamat Google tidak dapat menemukan $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-not-loaded": {
-    "message": "Layanan alamat Google tidak dimuat, tidak dapat menemukan $ADDRESS$.",
-    "placeholders": {
+    "m": "Layanan alamat Google tidak dimuat, tidak dapat menemukan $ADDRESS$.",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-reverse-fail": {
-    "message": "Tidak bisa mendapatkan informasi lokalitas (terdapat kesalahan pada layanan geocoder Google)"
+    "m": "Tidak bisa mendapatkan informasi lokalitas (terdapat kesalahan pada layanan geocoder Google)"
   },
   "geocoder-no-info": {
-    "message": "Layanan geocoder Google tidak memiliki informasi alamat di area ini. Anda mungkin dapat menggunakan plus+code dengan nama kota besar, jika ada kota dalam jarak 40 km."
+    "m": "Layanan geocoder Google tidak memiliki informasi alamat di area ini. Anda mungkin dapat menggunakan plus+code dengan nama kota besar, jika ada kota dalam jarak 40 km."
   },
   "google-maps": {
-    "message": "Google Maps"
+    "m": "Google Maps"
   },
   "help-01-0": {
-    "message": "<h2>Kode pos pribadi Anda</h2><p>plus+code merupakan kode singkat untuk setiap lokasi, di mana pun. Anda dapat menggunakannya untuk memandu orang ke lokasi tepat Anda, dengan cepat dan dapat diandalkan.</p>"
+    "m": "<h2>Kode pos pribadi Anda</h2><p>plus+code merupakan kode singkat untuk setiap lokasi, di mana pun. Anda dapat menggunakannya untuk memandu orang ke lokasi tepat Anda, dengan cepat dan dapat diandalkan.</p>"
   },
   "help-02-0": {
-    "message": "<h2>Apa itu plus+code?</h2><p>Plus+code merupakan kode singkat yang terdiri dari 6 atau 7 huruf dan angka, seperti <b>$EXAMPLE_CODE$</b>, atau dikombinasikan dengan kota seperti ini <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Dengan ini, Anda dapat memberi seseorang lokasi yang tepat yang tidak bergantung pada nama jalan atau nomor gedung.</p>",
-    "placeholders": {
+    "m": "<h2>Apa itu plus+code?</h2><p>Plus+code merupakan kode singkat yang terdiri dari 6 atau 7 huruf dan angka, seperti <b>$EXAMPLE_CODE$</b>, atau dikombinasikan dengan kota seperti ini <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Dengan ini, Anda dapat memberi seseorang lokasi yang tepat yang tidak bergantung pada nama jalan atau nomor gedung.</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       }
     }
   },
   "help-02-1": {
-    "message": "<h2>Bagaimana cara mengetahui letak plus+code?</h2><p>Ketika Anda memasukkan plus+code (<b>$EXAMPLE_CODE$</b>) pada ponsel atau komputer, plus+code akan menemukan kecocokan terdekat. Ini akan mengembalikan lokasi yang tepat selama Anda berada dalam jarak sekitar 40 kilometer dari lokasi.</p><p>Jika Anda lebih jauh, gunakan nama kota (<b>$EXAMPLE_CODE$ Nairobi</b>), atau masukkan plus+code termasuk kode wilayah (<b>$FULL_CODE$</b>).</p>",
-    "placeholders": {
+    "m": "<h2>Bagaimana cara mengetahui letak plus+code?</h2><p>Ketika Anda memasukkan plus+code (<b>$EXAMPLE_CODE$</b>) pada ponsel atau komputer, plus+code akan menemukan kecocokan terdekat. Ini akan mengembalikan lokasi yang tepat selama Anda berada dalam jarak sekitar 40 kilometer dari lokasi.</p><p>Jika Anda lebih jauh, gunakan nama kota (<b>$EXAMPLE_CODE$ Nairobi</b>), atau masukkan plus+code termasuk kode wilayah (<b>$FULL_CODE$</b>).</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-02-2": {
-    "message": "<h2>Apakah saya perlu mengajukan permohonan untuk mendapatkan plus+code?</h2><p>Tidak, plus+code sudah ada di mana-mana dan setiap orang dapat menggunakannya secara gratis.</p><p>Untuk mendapatkan plus+code suatu tempat, cukup seret peta untuk menyoroti tempat yang Anda inginkan.</p>"
+    "m": "<h2>Apakah saya perlu mengajukan permohonan untuk mendapatkan plus+code?</h2><p>Tidak, plus+code sudah ada di mana-mana dan setiap orang dapat menggunakannya secara gratis.</p><p>Untuk mendapatkan plus+code suatu tempat, cukup seret peta untuk menyoroti tempat yang Anda inginkan.</p>"
   },
   "help-03-0": {
-    "message": "<h2>Apa saja bagian dari kode?</h2><p>Untuk contoh kode kami <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> adalah kode wilayah (kira-kira 100 x 100 kilometer). <b>$CODE_PART_2$</b> adalah kode kota (5 x 5 kilometer). <b>$CODE_PART_3$</b> adalah kode lingkungan (250 x 250 meter). Setelah <b>+</b>, <b>$CODE_PART_4$</b> adalah kode gedung (14 x 14 meter). Kode ini dapat diikuti dengan satu digit kode pintu, apabila kode ukuran gedung diperpanjang lebih dari satu gedung.</p><p>Biasanya, kode wilayah tidak diperlukan, dan terkadang Anda juga dapat meletakkan kode kota.</p>",
-    "placeholders": {
+    "m": "<h2>Apa saja bagian dari kode?</h2><p>Untuk contoh kode kami <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> adalah kode wilayah (kira-kira 100 x 100 kilometer). <b>$CODE_PART_2$</b> adalah kode kota (5 x 5 kilometer). <b>$CODE_PART_3$</b> adalah kode lingkungan (250 x 250 meter). Setelah <b>+</b>, <b>$CODE_PART_4$</b> adalah kode gedung (14 x 14 meter). Kode ini dapat diikuti dengan satu digit kode pintu, apabila kode ukuran gedung diperpanjang lebih dari satu gedung.</p><p>Biasanya, kode wilayah tidak diperlukan, dan terkadang Anda juga dapat meletakkan kode kota.</p>",
+    "p": {
       "CODE_PART_1": {
-        "content": "6GCR"
+        "c": "6GCR"
       },
       "CODE_PART_2": {
-        "content": "MQ"
+        "c": "MQ"
       },
       "CODE_PART_3": {
-        "content": "RG"
+        "c": "RG"
       },
       "CODE_PART_4": {
-        "content": "59"
+        "c": "59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-03-1": {
-    "message": "<h2>Apakah lokasi memiliki lebih dari satu plus+code?</h2><p>Tidak. Setiap tempat hanya memiliki satu plus+code.</p>"
+    "m": "<h2>Apakah lokasi memiliki lebih dari satu plus+code?</h2><p>Tidak. Setiap tempat hanya memiliki satu plus+code.</p>"
   },
   "help-03-2": {
-    "message": "<h2>Dapatkah disimpan?</h2><p>Untuk menyimpan plus+code, cukup buat bookmark untuk laman tersebut. Ketika Anda membuka bookmark, tempat akan ditunjukkan.</p>"
+    "m": "<h2>Dapatkah disimpan?</h2><p>Untuk menyimpan plus+code, cukup buat bookmark untuk laman tersebut. Ketika Anda membuka bookmark, tempat akan ditunjukkan.</p>"
   },
   "help-03-3": {
-    "message": "<h2>Dapatkah saya menggunakannya pada saat tidak tersambung ke jaringan?</h2><p>Ya! Setelah laman ini dimuat pada ponsel atau komputer Anda, salinan akan disimpan dan Anda dapat memuatnya tanpa harus tersambung ke jaringan internet.</p>"
+    "m": "<h2>Dapatkah saya menggunakannya pada saat tidak tersambung ke jaringan?</h2><p>Ya! Setelah laman ini dimuat pada ponsel atau komputer Anda, salinan akan disimpan dan Anda dapat memuatnya tanpa harus tersambung ke jaringan internet.</p>"
   },
   "help-03-4": {
-    "message": "<h2>Bisakah saya mendapatkan petunjuk arah?</h2><p>Terdapat mode kompas yang menunjukkan arah dan jarak dari posisi Anda ke plus+code saat ini. Menu utama memiliki tautan ke berbagai penyedia peta yang dapat Anda gunakan.</p>"
+    "m": "<h2>Bisakah saya mendapatkan petunjuk arah?</h2><p>Terdapat mode kompas yang menunjukkan arah dan jarak dari posisi Anda ke plus+code saat ini. Menu utama memiliki tautan ke berbagai penyedia peta yang dapat Anda gunakan.</p>"
   },
   "help-03-5": {
-    "message": "<h2>Area plus+code saya terlalu besar!</h2><p>Jika Anda memperbesar lebih lanjut, kode akan ditujukan untuk area yang lebih kecil.</p>"
+    "m": "<h2>Area plus+code saya terlalu besar!</h2><p>Jika Anda memperbesar lebih lanjut, kode akan ditujukan untuk area yang lebih kecil.</p>"
   },
   "help-03-6": {
-    "message": "<h2>Alamat yang Anda tunjukkan salah!</h2><p>Alamat yang diberikan hanya saran. Ini digunakan untuk mengurangi panjang kode yang perlu digunakan. Anda dapat mencoba alamat lain di kotak telusur.</p>"
+    "m": "<h2>Alamat yang Anda tunjukkan salah!</h2><p>Alamat yang diberikan hanya saran. Ini digunakan untuk mengurangi panjang kode yang perlu digunakan. Anda dapat mencoba alamat lain di kotak telusur.</p>"
   },
   "input-prompt": {
-    "message": "Masukkan plus+code, alamat, atau seret peta"
+    "m": "Masukkan plus+code, alamat, atau seret peta"
   },
   "location-prompt": {
-    "message": "Layanan ini perlu menggunakan lokasi Anda. Jika browser meminta, izinkan."
+    "m": "Layanan ini perlu menggunakan lokasi Anda. Jika browser meminta, izinkan."
   },
   "map-error": {
-    "message": "Google Maps tidak dapat dimuat. Pastikan jaringan Anda berfungsi dan coba muat ulang laman.<br/><br/>Anda dapat memasukkan plus+code dengan atau tanpa kode area, dan menggunakan kompas, namun Anda tidak dapat memasukkan alamat, atau plus+code dengan alamat, sampai peta ditampilkan."
+    "m": "Google Maps tidak dapat dimuat. Pastikan jaringan Anda berfungsi dan coba muat ulang laman.<br/><br/>Anda dapat memasukkan plus+code dengan atau tanpa kode area, dan menggunakan kompas, namun Anda tidak dapat memasukkan alamat, atau plus+code dengan alamat, sampai peta ditampilkan."
   },
   "osm-maps": {
-    "message": "Open Street Map"
+    "m": "Open Street Map"
   },
   "ui-feedback": {
-    "message": "Masukan"
+    "m": "Masukan"
   },
   "ui-github": {
-    "message": "Lihat proyek"
+    "m": "Lihat proyek"
   },
   "ui-help": {
-    "message": "Bantuan"
+    "m": "Bantuan"
   },
   "ui-language": {
-    "message": "Bahasa"
+    "m": "Bahasa"
   },
   "ui-satellite": {
-    "message": "Satelit"
+    "m": "Satelit"
   },
   "units-km": {
-    "message": "km"
+    "m": "km"
   },
   "units-meters": {
-    "message": "meter"
+    "m": "meter"
   },
   "waiting-for-compass-1": {
-    "message": "Menunggu"
+    "m": "Menunggu"
   },
   "waiting-for-compass-2": {
-    "message": "membaca kompas"
+    "m": "membaca kompas"
   },
   "waiting-location": {
-    "message": "Menunggu lokasi..."
+    "m": "Menunggu lokasi..."
   }
 }

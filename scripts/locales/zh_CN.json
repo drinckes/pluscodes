@@ -2,165 +2,165 @@
 // where we don't have messages for that language yet.
 LocalisedMessages["zh"] = {
   "apple-maps": {
-    "message": "Apple 地图"
+    "m": "Apple 地图"
   },
   "apps": {
-    "message": "应用"
+    "m": "应用"
   },
   "bing-maps": {
-    "message": "Bing 地图"
+    "m": "Bing 地图"
   },
   "browser-problem-msg": {
-    "message": "您使用的浏览器无法支持我们需要的全部功能，例如位置信息和罗盘。<br/><br/>我们建议您使用 Chrome、Firefox 或 Opera 浏览器。"
+    "m": "您使用的浏览器无法支持我们需要的全部功能，例如位置信息和罗盘。<br/><br/>我们建议您使用 Chrome、Firefox 或 Opera 浏览器。"
   },
   "compass-check-fail-msg": {
-    "message": "您设备上的罗盘并未报告方向。您的设备可能不支持此罗盘，或者罗盘的运行不正常。"
+    "m": "您设备上的罗盘并未报告方向。您的设备可能不支持此罗盘，或者罗盘的运行不正常。"
   },
   "compass-check-msg": {
-    "message": "读取罗盘时可能出现了问题。<br/><br/>要测试其是否正常，请将设备拿稳放平并转一个圈。<br/><br/>转完一整圈后，请点按下面的按钮。"
+    "m": "读取罗盘时可能出现了问题。<br/><br/>要测试其是否正常，请将设备拿稳放平并转一个圈。<br/><br/>转完一整圈后，请点按下面的按钮。"
   },
   "compass-check-ok": {
-    "message": "您设备上的罗盘看起来正常！"
+    "m": "您设备上的罗盘看起来正常！"
   },
   "discuss": {
-    "message": "讨论"
+    "m": "讨论"
   },
   "dismiss": {
-    "message": "关闭"
+    "m": "关闭"
   },
   "extend-failure-msg": {
-    "message": "为获取$OLC$的位置，我们需要使用您当前的位置信息，或者您可以在信息中加入城镇或城市。<br/><br/>请确保您的浏览器允许使用位置信息，而且您的设备启用了位置信息服务。",
-    "placeholders": {
+    "m": "为获取$OLC$的位置，我们需要使用您当前的位置信息，或者您可以在信息中加入城镇或城市。<br/><br/>请确保您的浏览器允许使用位置信息，而且您的设备启用了位置信息服务。",
+    "p": {
       "OLC": {}
     }
   },
   "feedback-detail": {
-    "message": "发送反馈意见。请告诉我们您喜欢哪些功能或者哪些功能还存在问题，我们将会做出相应的改进。"
+    "m": "发送反馈意见。请告诉我们您喜欢哪些功能或者哪些功能还存在问题，我们将会做出相应的改进。"
   },
   "geocode-fail": {
-    "message": "Google 的地址服务无法定位$ADDRESS$。",
-    "placeholders": {
+    "m": "Google 的地址服务无法定位$ADDRESS$。",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-not-loaded": {
-    "message": "Google 的地址服务未加载，无法定位$ADDRESS$。",
-    "placeholders": {
+    "m": "Google 的地址服务未加载，无法定位$ADDRESS$。",
+    "p": {
       "ADDRESS": {}
     }
   },
   "geocode-reverse-fail": {
-    "message": "无法获取任何位置信息（Google 的地理编码服务出现错误）"
+    "m": "无法获取任何位置信息（Google 的地理编码服务出现错误）"
   },
   "geocoder-no-info": {
-    "message": "Google 的地理编码服务没有此区域的地址信息。如果方圆 40 公里之内有大城镇，那么您可以使用包含城镇名称的 plus+code。"
+    "m": "Google 的地理编码服务没有此区域的地址信息。如果方圆 40 公里之内有大城镇，那么您可以使用包含城镇名称的 plus+code。"
   },
   "google-maps": {
-    "message": "Google 地图"
+    "m": "Google 地图"
   },
   "help-01-0": {
-    "message": "<h2>您的私人邮政编码</h2><p>plus+code 是一小段代码，可以代表任何地方、任何位置。借助这些代码，您可以快速、可靠地将他人引导至确切的位置。</p>"
+    "m": "<h2>您的私人邮政编码</h2><p>plus+code 是一小段代码，可以代表任何地方、任何位置。借助这些代码，您可以快速、可靠地将他人引导至确切的位置。</p>"
   },
   "help-02-0": {
-    "message": "<h2>什么是 plus+code？</h2><p>plus+code 是由 6 个或 7 个字母和数字组成的一小段代码（例如 <b>$EXAMPLE_CODE$</b>），或者是包含城镇或城市名称的代码组合（例如<b>$EXAMPLE_CODE$ Nairobi</b>）。</p><p>使用这样的代码，您无需依赖街道名称或建筑物名称即可向他人提供准确的地址。</p>",
-    "placeholders": {
+    "m": "<h2>什么是 plus+code？</h2><p>plus+code 是由 6 个或 7 个字母和数字组成的一小段代码（例如 <b>$EXAMPLE_CODE$</b>），或者是包含城镇或城市名称的代码组合（例如<b>$EXAMPLE_CODE$ Nairobi</b>）。</p><p>使用这样的代码，您无需依赖街道名称或建筑物名称即可向他人提供准确的地址。</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       }
     }
   },
   "help-02-1": {
-    "message": "<h2>如何找出 plus+code 所代表的位置？</h2><p>当您在手机或计算机上输入 plus+code (<b>$EXAMPLE_CODE$</b>) 时，系统会为您找出最近的匹配位置。只要您距离该位置在 40 公里之内，系统即会返回正确的位置信息。</p><p>如果您距离较远，则可以使用城镇或城市名称 (<b>$EXAMPLE_CODE$ Nairobi</b>)，或者输入包含区域代码的 plus+code (<b>$FULL_CODE$</b>)。</p>",
-    "placeholders": {
+    "m": "<h2>如何找出 plus+code 所代表的位置？</h2><p>当您在手机或计算机上输入 plus+code (<b>$EXAMPLE_CODE$</b>) 时，系统会为您找出最近的匹配位置。只要您距离该位置在 40 公里之内，系统即会返回正确的位置信息。</p><p>如果您距离较远，则可以使用城镇或城市名称 (<b>$EXAMPLE_CODE$ Nairobi</b>)，或者输入包含区域代码的 plus+code (<b>$FULL_CODE$</b>)。</p>",
+    "p": {
       "EXAMPLE_CODE": {
-        "content": "MQRG+59"
+        "c": "MQRG+59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-02-2": {
-    "message": "<h2>我需要申请 plus+code 吗？</h2><p>不需要。各个位置都有对应的 plus+code，所有人均可免费使用。</p><p>要获取某个位置的 plus+code，只需拖动地图以突显所需位置即可。</p>"
+    "m": "<h2>我需要申请 plus+code 吗？</h2><p>不需要。各个位置都有对应的 plus+code，所有人均可免费使用。</p><p>要获取某个位置的 plus+code，只需拖动地图以突显所需位置即可。</p>"
   },
   "help-03-0": {
-    "message": "<h2>代码由哪些部分组成？</h2><p>以代码 <b>$FULL_CODE$</b> 为例，其中 <b>$CODE_PART_1$</b> 是区域代码（大约 100 平方公里）；<b>$CODE_PART_2$</b> 是城市代码（5 平方公里）；<b>$CODE_PART_3$</b> 是邻域代码（250 平方米）。<b>+</b> 后的 <b>$CODE_PART_4$</b> 是建筑物代码（14 平方米）。如果建筑物尺寸代码涵盖的范围超过一座建筑，则代码可以后跟一位数的门牌号代码。</p><p>一般情况下不需要区域代码，有些情况下也可以不提供城市代码。</p>",
-    "placeholders": {
+    "m": "<h2>代码由哪些部分组成？</h2><p>以代码 <b>$FULL_CODE$</b> 为例，其中 <b>$CODE_PART_1$</b> 是区域代码（大约 100 平方公里）；<b>$CODE_PART_2$</b> 是城市代码（5 平方公里）；<b>$CODE_PART_3$</b> 是邻域代码（250 平方米）。<b>+</b> 后的 <b>$CODE_PART_4$</b> 是建筑物代码（14 平方米）。如果建筑物尺寸代码涵盖的范围超过一座建筑，则代码可以后跟一位数的门牌号代码。</p><p>一般情况下不需要区域代码，有些情况下也可以不提供城市代码。</p>",
+    "p": {
       "CODE_PART_1": {
-        "content": "6GCR"
+        "c": "6GCR"
       },
       "CODE_PART_2": {
-        "content": "MQ"
+        "c": "MQ"
       },
       "CODE_PART_3": {
-        "content": "RG"
+        "c": "RG"
       },
       "CODE_PART_4": {
-        "content": "59"
+        "c": "59"
       },
       "FULL_CODE": {
-        "content": "6GCRMQRG+59"
+        "c": "6GCRMQRG+59"
       }
     }
   },
   "help-03-1": {
-    "message": "<h2>一个位置有多个 plus+code 吗？</h2><p>不，每个位置只有一个 plus+code。</p>"
+    "m": "<h2>一个位置有多个 plus+code 吗？</h2><p>不，每个位置只有一个 plus+code。</p>"
   },
   "help-03-2": {
-    "message": "<h2>我可以保存 plus+code 吗？</h2><p>要保存 plus+code，您只需为页面创建一个书签即可。当您打开相应书签时，系统会为您显示对应的位置。</p>"
+    "m": "<h2>我可以保存 plus+code 吗？</h2><p>要保存 plus+code，您只需为页面创建一个书签即可。当您打开相应书签时，系统会为您显示对应的位置。</p>"
   },
   "help-03-3": {
-    "message": "<h2>此功能可以在没有网络连接的情况下使用吗？</h2><p>可以。当您在手机或计算机上加载此页面之后，系统将会保存该页面的副本。即使您没有网络连接，也可以加载该页面。</p>"
+    "m": "<h2>此功能可以在没有网络连接的情况下使用吗？</h2><p>可以。当您在手机或计算机上加载此页面之后，系统将会保存该页面的副本。即使您没有网络连接，也可以加载该页面。</p>"
   },
   "help-03-4": {
-    "message": "<h2>我可以获得方向信息吗？</h2><p>罗盘模式可以向您展示方向以及您与当前的 plus+code 位置之间的距离。主菜单包含指向不同地图供应商的链接，供您选用。</p>"
+    "m": "<h2>我可以获得方向信息吗？</h2><p>罗盘模式可以向您展示方向以及您与当前的 plus+code 位置之间的距离。主菜单包含指向不同地图供应商的链接，供您选用。</p>"
   },
   "help-03-5": {
-    "message": "<h2>我的 plus+code 区域过大！</h2><p>如果您进一步放大地图，代码对应的区域就会变小。</p>"
+    "m": "<h2>我的 plus+code 区域过大！</h2><p>如果您进一步放大地图，代码对应的区域就会变小。</p>"
   },
   "help-03-6": {
-    "message": "<h2>您显示的地址错误！</h2><p>我们提供的地址只是一个建议，它可以用来缩短您需要使用的代码长度。您可以尝试在搜索框中输入其他地址。</p>"
+    "m": "<h2>您显示的地址错误！</h2><p>我们提供的地址只是一个建议，它可以用来缩短您需要使用的代码长度。您可以尝试在搜索框中输入其他地址。</p>"
   },
   "input-prompt": {
-    "message": "输入 plus+code、地址，或拖动地图"
+    "m": "输入 plus+code、地址，或拖动地图"
   },
   "location-prompt": {
-    "message": "此服务需要使用您的位置信息。如果浏览器提出相应请求，请允许。"
+    "m": "此服务需要使用您的位置信息。如果浏览器提出相应请求，请允许。"
   },
   "map-error": {
-    "message": "无法加载 Google 地图。请确保您的网络连接正常，然后尝试重新加载页面。<br/><br/>您可以输入 plus+code（有无区域代码均可），也可以使用罗盘，不过您只能在地图显示之后输入地址或附带地址的 plus+code。"
+    "m": "无法加载 Google 地图。请确保您的网络连接正常，然后尝试重新加载页面。<br/><br/>您可以输入 plus+code（有无区域代码均可），也可以使用罗盘，不过您只能在地图显示之后输入地址或附带地址的 plus+code。"
   },
   "osm-maps": {
-    "message": "打开街道地图"
+    "m": "打开街道地图"
   },
   "ui-feedback": {
-    "message": "反馈"
+    "m": "反馈"
   },
   "ui-github": {
-    "message": "查看项目"
+    "m": "查看项目"
   },
   "ui-help": {
-    "message": "帮助"
+    "m": "帮助"
   },
   "ui-language": {
-    "message": "语言"
+    "m": "语言"
   },
   "ui-satellite": {
-    "message": "卫星"
+    "m": "卫星"
   },
   "units-km": {
-    "message": "公里"
+    "m": "公里"
   },
   "units-meters": {
-    "message": "米"
+    "m": "米"
   },
   "waiting-for-compass-1": {
-    "message": "正在等待"
+    "m": "正在等待"
   },
   "waiting-for-compass-2": {
-    "message": "罗盘读取数据"
+    "m": "罗盘读取数据"
   },
   "waiting-location": {
-    "message": "正在确定位置信息..."
+    "m": "正在确定位置信息..."
   }
 }

@@ -104,13 +104,13 @@ Messages.prototype.get = function(key, params) {
  */
 Messages.prototype.getWithLanguage = function(language, key, params) {
   if (language in LocalisedMessages && key in LocalisedMessages[language]) {
-    var message = LocalisedMessages[language][key]["message"];
+    var message = LocalisedMessages[language][key]["m"];
     // Are there default placeholders?
     if ("placeholders" in LocalisedMessages[language][key]) {
-      var placeholders = LocalisedMessages[language][key]["placeholders"];
+      var placeholders = LocalisedMessages[language][key]["p"];
       for (var placeholder in placeholders) {
         var regex = new RegExp("\\$" + placeholder + "\\$", 'g');
-        var content = placeholders[placeholder]["content"];
+        var content = placeholders[placeholder]["c"];
         message = message.replace(regex, content);
       }
     }
