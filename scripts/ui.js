@@ -65,7 +65,7 @@ function setUpUI() {
       navigator.userAgent.toLowerCase().indexOf('mac os') != -1) {
     $('<li>').append(
         $('<a>').attr('id', 'nav_apple'))
-        .insertBefore($('#nav_feedback').closest('li'));
+        .insertBefore($('#nav_discuss').closest('li'));
   }
   if (navigator.userAgent.toLowerCase().indexOf('android') != -1 ||
       navigator.userAgent.toLowerCase().indexOf('ipod') != -1 ||
@@ -73,7 +73,7 @@ function setUpUI() {
       navigator.userAgent.toLowerCase().indexOf('blackberry') != -1) {
     $('<li>').append(
         $('<a>').attr('id', 'nav_apps'))
-        .insertBefore($('#nav_feedback').closest('li'));
+        .insertBefore($('#nav_discuss').closest('li'));
   }
   loadText();
 }
@@ -87,7 +87,7 @@ function loadText() {
   $('#nav_google').text(messages.get('google-maps'));
   $('#nav_bing').text(messages.get('bing-maps'));
   $('#nav_osm').text(messages.get('osm-maps'));
-  $('#nav_feedback').text(messages.get('ui-feedback'));
+  $('#nav_discuss').text(messages.get('discuss'));
   $('#nav_github').text(messages.get('ui-github'));
   // nav_dismiss uses a class because there are two of them.
   $('.nav_dismiss').text(messages.get('dismiss'));
@@ -158,10 +158,6 @@ function uiClick(e) {
         displayCodeMapCompass(displayedCode);
       }
     }
-  }
-  if (clickedId === 'nav_feedback') {
-    menuHide();
-    commentShow();
   }
 }
 
@@ -281,38 +277,6 @@ function noLocationDisplay(code) {
       $('<button>').addClass('dismiss').click(function() {
           dialog.remove();
       }));
-}
-
-function commentShow() {
-  var dialog = new Dialog('comment',
-      $('<section>').append($('<p>').html(messages.get('feedback-detail')))
-      .append($('<textarea>')));
-  dialog.addButton($('<button>').addClass('dismiss').click(commentControls));
-  dialog.addButton($('<button>').addClass('upload').click(commentControls));
-}
-
-function commentControls() {
-  if ($(this).hasClass('upload')) {
-    var message = $('#comment-dialog textarea').val().trim();
-    if (message != '') {
-      var lat = null;
-      var lng = null;
-      if (deviceLatLng !== null) {
-        lat = deviceLatLng[0];
-        lng = deviceLatLng[1];
-      }
-      Feedback.storeFeedback(
-          lat,
-          lng,
-          displayedCode,
-          $('.infobox .address').text(),
-          map.isReady(),
-          compass.appearsGood(),
-          messages.language,
-          message);
-    }
-  }
-  Dialog.remove('comment');
 }
 
 function compassCheckDisplay() {

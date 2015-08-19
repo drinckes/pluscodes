@@ -112,9 +112,6 @@ function init() {
   map = new MapController(document.querySelector('.map'));
   compass = new CompassController(document.querySelector('.compass_container'));
   compass.initialise();
-
-  // If we have any feedback left over.
-  Feedback.sendFeedback();
 }
 
 /** Called when the map is zoomed. */

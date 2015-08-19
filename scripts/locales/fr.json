@@ -1,160 +1,163 @@
 LocalisedMessages["fr"] = {
   "apple-maps": {
     "message": "Apple Maps"
-  }, 
+  },
   "apps": {
     "message": "Applications"
-  }, 
+  },
   "bing-maps": {
     "message": "Bing Maps"
-  }, 
+  },
   "browser-problem-msg": {
     "message": "Le navigateur que vous utilisez n'est pas compatible avec toutes les fonctionnalités dont nous avons besoin, comme la localisation et la boussole.<br/><br/>Nous vous recommandons de passer à Chrome, Firefox ou Opera."
-  }, 
+  },
   "compass-check-fail-msg": {
     "message": "La boussole de votre appareil n'indique pas la direction. Il est possible que la boussole ne soit pas compatible avec votre appareil ou qu'elle ne fonctionne pas correctement."
-  }, 
+  },
   "compass-check-msg": {
     "message": "Un problème est peut-être survenu lors de la lecture de la boussole.<br/><br/>Pour la tester, tenez votre appareil à l'horizontale et décrivez un cercle.<br/><br/>Lorsque vous avez fait un tour complet, appuyez sur le bouton ci-dessous."
-  }, 
+  },
   "compass-check-ok": {
     "message": "La boussole de votre appareil semble fonctionner !"
-  }, 
+  },
+  "discuss": {
+    "message": "Groupe de discussion"
+  },
   "dismiss": {
     "message": "Ignorer"
-  }, 
+  },
   "extend-failure-msg": {
-    "message": "Pour localiser $OLC$, nous devons connaître votre position ou inclure une ville dans les données. <br/><br/>Vérifiez que le partage de position est autorisé dans votre navigateur et que les services de localisation sont activés sur votre appareil.", 
+    "message": "Pour localiser $OLC$, nous devons connaître votre position ou inclure une ville dans les données. <br/><br/>Vérifiez que le partage de position est autorisé dans votre navigateur et que les services de localisation sont activés sur votre appareil.",
     "placeholders": {
       "OLC": {}
     }
-  }, 
+  },
   "feedback-detail": {
     "message": "Envoyez-nous vos commentaires. Dites-nous ce que vous appréciez. Expliquez-nous ce qui fonctionne mal et nous essaierons de l'améliorer."
-  }, 
+  },
   "geocode-fail": {
-    "message": "Le service d'adresse de Google ne parvient pas à localiser $ADDRESS$.", 
+    "message": "Le service d'adresse de Google ne parvient pas à localiser $ADDRESS$.",
     "placeholders": {
       "ADDRESS": {}
     }
-  }, 
+  },
   "geocode-not-loaded": {
-    "message": "Impossible de localiser $ADDRESS$, car le service d'adresse de Google n'est pas chargé.", 
+    "message": "Impossible de localiser $ADDRESS$, car le service d'adresse de Google n'est pas chargé.",
     "placeholders": {
       "ADDRESS": {}
     }
-  }, 
+  },
   "geocode-reverse-fail": {
     "message": "Impossible d'obtenir des informations sur la localité (erreur du service de géocodage de Google)."
-  }, 
+  },
   "geocoder-no-info": {
     "message": "Le service de géocodage de Google ne dispose pas d'informations de localisation dans cette zone. Vous pouvez essayer d'utiliser un code plus+code contenant le nom d'une grande ville, s'il y en a une dans un rayon de 40 km."
-  }, 
+  },
   "google-maps": {
     "message": "Google Maps"
-  }, 
+  },
   "help-01-0": {
     "message": "<h2>Votre code postal personnel</h2><p>Les codes plus+code sont des codes courts qui désignent un lieu précis. Vous pouvez utiliser ces codes pour guider d'autres personnes vers votre position exacte, de façon rapide et fiable.</p>"
-  }, 
+  },
   "help-02-0": {
-    "message": "<h2>Qu'est-ce qu'un code plus+code ?</h2><p>Il s'agit d'un code court composé de six ou sept lettres et chiffres, comme <b>$EXAMPLE_CODE$</b>. Il peut être associé à une ville, par exemple : <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Il permet d'indiquer une position exacte, sans recourir aux noms de rues ni aux numéros de bâtiment.</p>", 
+    "message": "<h2>Qu'est-ce qu'un code plus+code ?</h2><p>Il s'agit d'un code court composé de six ou sept lettres et chiffres, comme <b>$EXAMPLE_CODE$</b>. Il peut être associé à une ville, par exemple : <b>$EXAMPLE_CODE$ Nairobi</b>.</p><p>Il permet d'indiquer une position exacte, sans recourir aux noms de rues ni aux numéros de bâtiment.</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
       }
     }
-  }, 
+  },
   "help-02-1": {
-    "message": "<h2>Comment puis-je trouver le lieu désigné par un code plus+code ?</h2><p>Lorsque vous saisissez un code plus+code (<b>$EXAMPLE_CODE$</b>) sur votre téléphone ou ordinateur, celui-ci affiche la correspondance la plus proche. Si vous vous situez dans un rayon d'environ 40 kilomètres autour de ce lieu, le lieu exact s'affichera.</p><p>Si vous en êtes plus éloigné, ajoutez le nom de la ville (<b>$EXAMPLE_CODE$ Nairobi</b>), ou saisissez le code plus+code accompagné du code de région (<b>$FULL_CODE$</b>).</p>", 
+    "message": "<h2>Comment puis-je trouver le lieu désigné par un code plus+code ?</h2><p>Lorsque vous saisissez un code plus+code (<b>$EXAMPLE_CODE$</b>) sur votre téléphone ou ordinateur, celui-ci affiche la correspondance la plus proche. Si vous vous situez dans un rayon d'environ 40 kilomètres autour de ce lieu, le lieu exact s'affichera.</p><p>Si vous en êtes plus éloigné, ajoutez le nom de la ville (<b>$EXAMPLE_CODE$ Nairobi</b>), ou saisissez le code plus+code accompagné du code de région (<b>$FULL_CODE$</b>).</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
-      }, 
+      },
       "FULL_CODE": {
         "content": "6GCRMQRG+59"
       }
     }
-  }, 
+  },
   "help-02-2": {
     "message": "<h2>Dois-je faire une demande pour obtenir un code plus+code ?</h2><p>Non. Tous les lieux sont déjà associés à un code plus+code, que tout le monde peut utiliser gratuitement.</p><p>Pour connaître le code plus+code d'un lieu, il suffit de faire glisser la carte pour le mettre en évidence.</p>"
-  }, 
+  },
   "help-03-0": {
-    "message": "<h2>De quoi le code se compose-t-il ?</h2><p>Dans notre exemple, <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> est le code de la région (environ 100 x 100 kilomètres), <b>$CODE_PART_2$</b> le code de la ville (5 x 5 kilomètres) et <b>$CODE_PART_3$</b> le code du quartier (250 x 250 mètres). Après le signe <b>+</b>, <b>$CODE_PART_4$</b> correspond au code du bâtiment (14 x 14 mètres). Il peut être suivi d'un code de porte à un chiffre, si le code du bâtiment correspond à plusieurs bâtiments.</p><p>Le code de région n'est généralement pas nécessaire. Celui de la ville peut parfois être omis également.</p>", 
+    "message": "<h2>De quoi le code se compose-t-il ?</h2><p>Dans notre exemple, <b>$FULL_CODE$</b>, <b>$CODE_PART_1$</b> est le code de la région (environ 100 x 100 kilomètres), <b>$CODE_PART_2$</b> le code de la ville (5 x 5 kilomètres) et <b>$CODE_PART_3$</b> le code du quartier (250 x 250 mètres). Après le signe <b>+</b>, <b>$CODE_PART_4$</b> correspond au code du bâtiment (14 x 14 mètres). Il peut être suivi d'un code de porte à un chiffre, si le code du bâtiment correspond à plusieurs bâtiments.</p><p>Le code de région n'est généralement pas nécessaire. Celui de la ville peut parfois être omis également.</p>",
     "placeholders": {
       "CODE_PART_1": {
         "content": "6GCR"
-      }, 
+      },
       "CODE_PART_2": {
         "content": "MQ"
-      }, 
+      },
       "CODE_PART_3": {
         "content": "RG"
-      }, 
+      },
       "CODE_PART_4": {
         "content": "59"
-      }, 
+      },
       "FULL_CODE": {
         "content": "6GCRMQRG+59"
       }
     }
-  }, 
+  },
   "help-03-1": {
     "message": "<h2>Un lieu peut-il posséder plusieurs codes plus+code ?</h2><p>Non. Un lieu donné ne peut être associé qu'à un seul code plus+code.</p>"
-  }, 
+  },
   "help-03-2": {
     "message": "<h2>Puis-je enregistrer les codes ?</h2><p>Pour enregistrer un code plus+code, il vous suffit d'ajouter la page à vos favoris. Le lieu s'affichera lorsque vous ouvrirez la page.</p>"
-  }, 
+  },
   "help-03-3": {
     "message": "<h2>Puis-je utiliser cette fonctionnalité lorsque je n'ai pas de réseau ?</h2><p>Oui ! Une fois que vous chargé la page sur votre téléphone ou votre ordinateur, celui-ci en garde une copie à laquelle vous pouvez accéder même hors connexion.</p>"
-  }, 
+  },
   "help-03-4": {
     "message": "<h2>Puis-je obtenir un itinéraire ?</h2><p>Un mode boussole vous indique la direction et la distance qui vous sépare du lieu désigné par le code plus+code. Le menu principal contient des liens vers différents fournisseurs de cartes que vous pouvez utiliser.</p>"
-  }, 
+  },
   "help-03-5": {
     "message": "<h2>La zone indiquée par mon code plus+code est trop grande !</h2><p>Effectuez un zoom avant pour obtenir un code correspondant à une zone plus réduite.</p>"
-  }, 
+  },
   "help-03-6": {
     "message": "<h2>L'adresse affichée est erronée !</h2><p>L'adresse fournie n'est qu'une simple suggestion. Elle sert à réduire la longueur du code que vous devez utiliser. Vous pouvez essayer de saisir d'autres adresses dans le champ de recherche.</p>"
-  }, 
+  },
   "input-prompt": {
     "message": "Saisissez un code plus+code, une adresse ou faites glisser la carte"
-  }, 
+  },
   "location-prompt": {
     "message": "Ce service doit connaître votre position. Autorisez le partage de votre position si vous y êtes invité par votre navigateur."
-  }, 
+  },
   "map-error": {
     "message": "Impossible d'ouvrir Google Maps. Vérifiez que votre réseau fonctionne et réessayez de charger la page.<br/><br/>Tant que Google Maps n'est pas affiché, vous pouvez saisir des codes plus+code avec ou sans code de région, et utiliser la boussole. En revanche, vous ne pouvez pas saisir d'adresses, ni saisir de codes plus+code avec adresse."
-  }, 
+  },
   "osm-maps": {
     "message": "Open Street Map"
-  }, 
+  },
   "ui-feedback": {
     "message": "Commentaires"
-  }, 
+  },
   "ui-github": {
     "message": "Afficher le projet"
-  }, 
+  },
   "ui-help": {
     "message": "Aide"
-  }, 
+  },
   "ui-language": {
     "message": "Langue"
-  }, 
+  },
   "ui-satellite": {
     "message": "Satellite"
-  }, 
+  },
   "units-km": {
     "message": "km"
-  }, 
+  },
   "units-meters": {
     "message": "mètres"
-  }, 
+  },
   "waiting-for-compass-1": {
     "message": "En attente d'une"
-  }, 
+  },
   "waiting-for-compass-2": {
     "message": "indication de la boussole"
-  }, 
+  },
   "waiting-location": {
     "message": "En attente d'informations de localisation…"
   }

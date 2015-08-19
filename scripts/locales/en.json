@@ -218,5 +218,8 @@ LocalisedMessages["en"] = {
   "feedback-detail": {
     "message": "Send feedback. Let us know what you like, or what is not working and we'll try to improve.",
     "description": "Message"
+  },
+  "discuss": {
+    "message": "Discuss"
   }
 };

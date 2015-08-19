@@ -1,160 +1,163 @@
 LocalisedMessages["zh-TW"] = {
   "apple-maps": {
     "message": "Apple 地圖"
-  }, 
+  },
   "apps": {
     "message": "應用程式"
-  }, 
+  },
   "bing-maps": {
     "message": "Bing 地圖"
-  }, 
+  },
   "browser-problem-msg": {
     "message": "您的瀏覽器不支援我們需要的所有功能，如定位與指南針。<br/><br/>建議改用 Chrome、Firefox 或 Opera。"
-  }, 
+  },
   "compass-check-fail-msg": {
     "message": "您裝置上的指南針並未回報方向，可能是裝置不支援指南針，或指南針無法正常運作。"
-  }, 
+  },
   "compass-check-msg": {
     "message": "讀取指南針時可能發生問題。<br/><br/>若要測試，請將裝置平拿並旋轉一圈。<br/><br/>完整繞完一圈後，請輕按下方按鈕。"
-  }, 
+  },
   "compass-check-ok": {
     "message": "您裝置上的指南針沒有問題！"
-  }, 
+  },
+  "discuss": {
+    "message": "討論"
+  },
   "dismiss": {
     "message": "關閉"
-  }, 
+  },
   "extend-failure-msg": {
-    "message": "若要知道$OLC$位於何處，我們需要您提供目前位置，或在資訊中加入鄉鎮或縣市名稱。<br/><br/>請確認瀏覽器允許定位，且裝置已啟用定位服務。", 
+    "message": "若要知道$OLC$位於何處，我們需要您提供目前位置，或在資訊中加入鄉鎮或縣市名稱。<br/><br/>請確認瀏覽器允許定位，且裝置已啟用定位服務。",
     "placeholders": {
       "OLC": {}
     }
-  }, 
+  },
   "feedback-detail": {
     "message": "歡迎提供意見。無論是優點或有待改進之處，都請與我們分享，我們會努力改善。"
-  }, 
+  },
   "geocode-fail": {
-    "message": "Google 的地址服務找不到$ADDRESS$。", 
+    "message": "Google 的地址服務找不到$ADDRESS$。",
     "placeholders": {
       "ADDRESS": {}
     }
-  }, 
+  },
   "geocode-not-loaded": {
-    "message": "Google 地址服務未載入，找不到$ADDRESS$。", 
+    "message": "Google 地址服務未載入，找不到$ADDRESS$。",
     "placeholders": {
       "ADDRESS": {}
     }
-  }, 
+  },
   "geocode-reverse-fail": {
     "message": "無法取得任何地址資訊 (Google 的地理編碼服務發生錯誤)"
-  }, 
+  },
   "geocoder-no-info": {
     "message": "Google 的地理編碼服務沒有這個區域的地址資訊。若 40 公里內有較大的鄉鎮，建議使用 plus+code 加上該鄉鎮名稱。"
-  }, 
+  },
   "google-maps": {
     "message": "Google 地圖"
-  }, 
+  },
   "help-01-0": {
     "message": "<h2>您專屬的私人郵遞區號</h2><p>plus+code 是可代表任何位置或地點的短碼。您可以使用 plus+code 為他人提供快速可靠的指引，協助他們找到您的確切位置。</p>"
-  }, 
+  },
   "help-02-0": {
-    "message": "<h2>什麼是 plus+code？</h2><p>plus+code 是一種短碼，由 6 或 7 個字母與數字組成，如 <b>$EXAMPLE_CODE$</b>；有時也會加上鄉鎮或縣市名稱，如<b>$EXAMPLE_CODE$奈洛比</b>。</p><p>在不清楚街道名稱或建築物門牌號碼的情況下，您可以藉由 plus+code 為他人提供確切位置。</p>", 
+    "message": "<h2>什麼是 plus+code？</h2><p>plus+code 是一種短碼，由 6 或 7 個字母與數字組成，如 <b>$EXAMPLE_CODE$</b>；有時也會加上鄉鎮或縣市名稱，如<b>$EXAMPLE_CODE$奈洛比</b>。</p><p>在不清楚街道名稱或建築物門牌號碼的情況下，您可以藉由 plus+code 為他人提供確切位置。</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
       }
     }
-  }, 
+  },
   "help-02-1": {
-    "message": "<h2>我要如何找出 plus+code？</h2><p>在手機或電腦上輸入 plus+code (<b>$EXAMPLE_CODE$</b>)，即可找出最接近的結果。只要您位於目標地點約 40 公里的範圍內，這個結果就能顯示正確位置。</p><p>若距離較遠，請使用鄉鎮或縣市名稱 (<b>$EXAMPLE_CODE$奈洛比</b>)，或輸入含區域碼的 plus+code (<b>$FULL_CODE$</b>)。</p>", 
+    "message": "<h2>我要如何找出 plus+code？</h2><p>在手機或電腦上輸入 plus+code (<b>$EXAMPLE_CODE$</b>)，即可找出最接近的結果。只要您位於目標地點約 40 公里的範圍內，這個結果就能顯示正確位置。</p><p>若距離較遠，請使用鄉鎮或縣市名稱 (<b>$EXAMPLE_CODE$奈洛比</b>)，或輸入含區域碼的 plus+code (<b>$FULL_CODE$</b>)。</p>",
     "placeholders": {
       "EXAMPLE_CODE": {
         "content": "MQRG+59"
-      }, 
+      },
       "FULL_CODE": {
         "content": "6GCRMQRG+59"
       }
     }
-  }, 
+  },
   "help-02-2": {
     "message": "<h2>我需要申請 plus+code 嗎？</h2><p>不用，每個地方原本就有 plus+code，且任何人皆可免費使用。</p><p>若要取得某個地點的 plus+code，只要拖曳地圖，標示出想要的地點即可。</p>"
-  }, 
+  },
   "help-03-0": {
-    "message": "<h2>代碼由哪些部分組成？</h2><p>以我們的範例代碼 <b>$FULL_CODE$</b> 為例，<b>$CODE_PART_1$</b> 是區域碼 (約 100 x 100 公里)；<b>$CODE_PART_2$</b> 是縣市代碼 (5 x 5 公里)；<b>$CODE_PART_3$</b> 是鄰近地區代碼 (250 x 250 公尺)。位於 <b>+</b> 後面的 <b>$CODE_PART_4$</b> 是建築物代碼 (14 x 14 公尺)。若建築物的大小代碼橫跨多棟建築物，可在後面加上單一數字的大門代碼。</p><p>區域碼通常不會用到，有時連縣市代碼也能省略。</p>", 
+    "message": "<h2>代碼由哪些部分組成？</h2><p>以我們的範例代碼 <b>$FULL_CODE$</b> 為例，<b>$CODE_PART_1$</b> 是區域碼 (約 100 x 100 公里)；<b>$CODE_PART_2$</b> 是縣市代碼 (5 x 5 公里)；<b>$CODE_PART_3$</b> 是鄰近地區代碼 (250 x 250 公尺)。位於 <b>+</b> 後面的 <b>$CODE_PART_4$</b> 是建築物代碼 (14 x 14 公尺)。若建築物的大小代碼橫跨多棟建築物，可在後面加上單一數字的大門代碼。</p><p>區域碼通常不會用到，有時連縣市代碼也能省略。</p>",
     "placeholders": {
       "CODE_PART_1": {
         "content": "6GCR"
-      }, 
+      },
       "CODE_PART_2": {
         "content": "MQ"
-      }, 
+      },
       "CODE_PART_3": {
         "content": "RG"
-      }, 
+      },
       "CODE_PART_4": {
         "content": "59"
-      }, 
+      },
       "FULL_CODE": {
         "content": "6GCRMQRG+59"
       }
     }
-  }, 
+  },
   "help-03-1": {
     "message": "<h2>一個位置會有多個 plus+code 嗎？</h2><p>不會，任何位置都只有一個 plus+code。</p>"
-  }, 
+  },
   "help-03-2": {
     "message": "<h2>我可以儲存 plus+code 嗎？</h2><p>只要為頁面新增書籤，即可儲存 plus+code。日後打開書籤，就能看到地點。</p>"
-  }, 
+  },
   "help-03-3": {
     "message": "<h2>沒有網路也可以使用嗎？</h2><p>可以！手機或電腦載入此頁面後，會保留一份副本，即使沒有網路連線也能載入。</p>"
-  }, 
+  },
   "help-03-4": {
     "message": "<h2>我可以規劃路線嗎？</h2><p>指南針模式可以顯示您所在位置與目前 plus+code 之間的路線及距離，主選單也提供了多個地圖服務供應商的連結。</p>"
-  }, 
+  },
   "help-03-5": {
     "message": "<h2>我的 plus+code 區域過大！</h2><p>若再放大畫面，代碼會顯示較小範圍的區域。</p>"
-  }, 
+  },
   "help-03-6": {
     "message": "<h2>您顯示的地址有誤！</h2><p>這裡提供的地址僅供參考，主要目的是縮短您要使用的代碼長度。請在搜尋框裡輸入其他地址。</p>"
-  }, 
+  },
   "input-prompt": {
     "message": "請輸入 plus+code、地址，或拖曳地圖"
-  }, 
+  },
   "location-prompt": {
     "message": "此服務需要使用您的位置，瀏覽器詢問時請允許使用。"
-  }, 
+  },
   "map-error": {
     "message": "無法載入 Google 地圖。請確認網路連線，再嘗試重新載入頁面。<br/><br/>您可以輸入包含或不含區域碼的 plus+code，也可以使用指南針，但須等到地圖顯示後，才能輸入地址或 plus+code 與地址。"
-  }, 
+  },
   "osm-maps": {
     "message": "開啟街道地圖"
-  }, 
+  },
   "ui-feedback": {
     "message": "意見回饋"
-  }, 
+  },
   "ui-github": {
     "message": "查看專案"
-  }, 
+  },
   "ui-help": {
     "message": "說明"
-  }, 
+  },
   "ui-language": {
     "message": "語言"
-  }, 
+  },
   "ui-satellite": {
     "message": "衛星檢視"
-  }, 
+  },
   "units-km": {
     "message": "公里"
-  }, 
+  },
   "units-meters": {
     "message": "公尺"
-  }, 
+  },
   "waiting-for-compass-1": {
     "message": "正在等候"
-  }, 
+  },
   "waiting-for-compass-2": {
     "message": "指南針讀數"
-  }, 
+  },
   "waiting-location": {
     "message": "正在判斷裝置位置..."
   }
