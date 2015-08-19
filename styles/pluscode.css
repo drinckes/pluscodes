@@ -253,7 +253,7 @@ h2 {
    background-size: 128px 128px;
    background-repeat: no-repeat;
    width:128px;
-   height:128px;
+   min-height:128px;
 }
 
 /* Formats for the InfoBox panel. */
