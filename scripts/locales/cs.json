@@ -188,5 +188,8 @@ LocalisedMessages["cs"] = {
   "feedback-detail": {
     "message": "Poslat zpětnou vazbu. Dejte nám vědět co se vám líbí, nebo co nefunguje a my se pokusíme to opravit.",
     "description": "Message"
+  },
+  "discuss": {
+    "message": "Diskuse"
   }
 };
