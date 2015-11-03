@@ -159,10 +159,11 @@ Geocoder.__extractAddress = function(lat, lng, componentTypes, results) {
   }
   // Get one address component, starting at the most detailed level.
   var address = [];
-  while (componentTypes.length > 0 && address.length < 1) {
+  while (componentTypes.length > 0) {
     var type = componentTypes.shift();
     if (type in components) {
       address.push(components[type]);
+      break;
     }
   }
   if (postal_code != '') {
