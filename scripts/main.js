@@ -452,9 +452,9 @@ function shortenDisplayedCode(code, address, lat, lng) {
   try {
     var shortCode = OpenLocationCode.shorten(code.code, lat, lng);
     if (shortCode != code.code) {
-      // Too much? Keep at least AB+CD.
-      if (shortCode.length < code.code.length - 6) {
-        shortCode = code.code.substr(6);
+      // Too much? Keep at least ABCD+.
+      if (shortCode.length < code.code.length - 4) {
+        shortCode = code.code.substr(4);
       }
       codeAddressCache.put(code.neighbourhood,
           {'address': address, 'lat': lat, 'lng': lng});
