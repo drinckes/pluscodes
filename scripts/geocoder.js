@@ -93,9 +93,7 @@ Geocoder.lookupLatLng = function(lat, lng) {
         // We want to get a collection of components in order.
         // Including postcode can make shortening dependent on it.
         var types = [
-            'neighborhood',
             'postal_town',
-            'sublocality',
             'locality',
             'administrative_area_level_4',
             'administrative_area_level_3',
@@ -122,14 +120,13 @@ Geocoder.lookupLatLng = function(lat, lng) {
       in order from most to least detailed.
   @param {object} results The results of a Google Maps API call to geocode a
       lat/lng.
-  @return {string} an address string made up of the two most detailed componets,
-      and the two least detailed components.
+  @return {string} an address string made up of a detailed component,
+      the post code and the least detailed component.
 */
 Geocoder.__extractAddress = function(lat, lng, componentTypes, results) {
   // Mapping from type to name - so we know what components we have.
   var components = {};
-  // Just a list of the acquired names - so we can avoid duplicates.
-  var componentNames = [];
+  var postal_code = '';
   // Scan all the results and all the address components for matches
   // with the desired types. Take the first match for any component and
   // save them in the addressXXX lists.
@@ -151,29 +148,32 @@ Geocoder.__extractAddress = function(lat, lng, componentTypes, results) {
         // doesn't include a comma, keep it.
         if (componentTypes.indexOf(addressComponent.types[k]) > -1 &&
             !(addressComponent.types[k] in components) &&
-            componentNames.indexOf(addressComponent.long_name) == -1 &&
             addressComponent.long_name.indexOf(',') == -1) {
-          componentNames.push(addressComponent.long_name);
           components[addressComponent.types[k]] = addressComponent.long_name;
+        }
+        if (addressComponent.types[k] == "postal_code") {
+          postal_code = addressComponent.long_name;
         }
       }
     }
   }
-  // Get up to two address components, starting at the most detailed level.
+  // Get one address component, starting at the most detailed level.
   var address = [];
-  while (componentTypes.length > 0 && address.length < 2) {
+  while (componentTypes.length > 0 && address.length < 1) {
     var type = componentTypes.shift();
     if (type in components) {
       address.push(components[type]);
     }
   }
-  // Get up to two address components, starting at the least detailed level.
-  var count = 0;
-  while (componentTypes.length > 0 && count < 2) {
+  if (postal_code != '') {
+    address.push(postal_code);
+  }
+  // Get one address component, starting at the least detailed level.
+  while (componentTypes.length > 0) {
     var type = componentTypes.pop();
     if (type in components) {
       address.push(components[type]);
-      count++;
+      break;
     }
   }
   return address.join(', ');
