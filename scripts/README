@@ -1,1 +1,6 @@
 Compress javascript using cat *.js */*.json | yui-compressor --type js -o ../compressed.js
+
+If you don't have yui-compressor, then:
+  cat *.js */*.json > ../compressed.js
+
+The .htaccess file should configure the webserver to gzip the content anyway so it shouldn't matter much.

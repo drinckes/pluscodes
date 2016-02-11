@@ -6,3 +6,6 @@ RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 # Rewrite URLs that start with +<OLC code> or <OLC 6 digits>+ to index.html
 RewriteRule (^\+|^........\+) index.html [NC,L,NE]
+
+# Turn on compression.
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/x-javascript
